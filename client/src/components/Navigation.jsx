@@ -1,14 +1,19 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 const Navigation = () => {
   return (
     <Nav className="justify-content-end" activeKey="/home">
       <Nav.Item>
-        <Nav.Link href="/home">Sign In</Nav.Link>
+        <Button href="./" variant="link">
+          Log In
+        </Button>{' '}
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-1">Log In</Nav.Link>
+        <Button href="./" variant="outline-primary">
+          Sign Up
+        </Button>{' '}
       </Nav.Item>
     </Nav>
   );
