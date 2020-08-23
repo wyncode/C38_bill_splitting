@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AppContextProvider } from './context/AppContext';
 import ContextDemo from './components/ContextDemo';
-
+import Navigation from './components/Navigation';
 import './App.css';
 
 const App = () => {
@@ -17,6 +17,7 @@ const App = () => {
 
   return (
     <AppContextProvider>
+      <Navigation />
       <div id="demo">
         <h3>Hello from client/src/App.js</h3>
         <ContextDemo />
