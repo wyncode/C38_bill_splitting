@@ -7,6 +7,7 @@ import HomePage from './components/HomePage/HomePage';
 import LoginPage from './components/LoginPage/LoginPage';
 import SignUp from './components/SignUp/SignUp';
 import Footer from './components/Footer/Footer.jsx';
+import { BrowserRouter } from 'react-router-dom';
 
 const App = () => {
   // const [serverMessage, setServerMessage] = useState('');
