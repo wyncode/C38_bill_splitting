@@ -3,27 +3,23 @@ import { AppContextProvider } from './context/AppContext';
 import ContextDemo from './components/ContextDemo';
 import Navigation from './components/Navigation';
 import './App.css';
+import HomePage from './components/HomePage/HomePage';
+import LoginPage from './components/LoginPage/LoginPage';
+import SignUp from './components/SignUp/SignUp';
+import Footer from './components/Footer/Footer.jsx';
 
 const App = () => {
-  const [serverMessage, setServerMessage] = useState('');
-
-  const fetchDemoData = () => {
-    fetch('/api/demo')
-      .then((response) => response.json())
-      .then((data) => setServerMessage(data.message));
-  };
-
-  useEffect(fetchDemoData, []);
-
   return (
-    <AppContextProvider>
-      <Navigation />
-      <div id="demo">
-        <h3>Hello from client/src/App.js</h3>
-        <ContextDemo />
-        <h3>{serverMessage}</h3>
-      </div>
-    </AppContextProvider>
+    <BrowserRouter>
+      <AppContextProvider>
+        <Navigation />
+        <HomePage />
+        {/* <LoginPage />
+        <SignUp />
+        <ContextDemo /> */}
+        <Footer />
+      </AppContextProvider>
+    </BrowserRouter>
   );
 };
 
