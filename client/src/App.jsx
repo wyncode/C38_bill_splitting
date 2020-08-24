@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AppContextProvider } from './context/AppContext';
 import ContextDemo from './components/ContextDemo';
-import { BrowserRouter } from 'react-router-dom';
+import Navigation from './components/Navigation';
 import './App.css';
 import HomePage from './components/HomePage/HomePage';
 import LoginPage from './components/LoginPage/LoginPage';
@@ -22,6 +22,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <AppContextProvider>
+        <Navigation />
         <HomePage />
         {/* <LoginPage />
         <SignUp />
