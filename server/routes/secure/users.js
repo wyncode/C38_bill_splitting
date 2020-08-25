@@ -1,7 +1,7 @@
 const router = require('express').Router(),
   cloudinary = require('cloudinary').v2,
   User = require('../../db/models/user'),
-  isAdmin = require('../../middleware/authorization/index');
+  isAdmin = require('../../db/middleware/authorization/authorization');
 
 router.get('/api/admin', isAdmin(), async (req, res) => {
   try {
