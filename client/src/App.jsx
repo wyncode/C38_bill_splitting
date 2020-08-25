@@ -1,25 +1,27 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { AppContextProvider } from './context/AppContext';
-import ContextDemo from './components/ContextDemo';
 import Navigation from './components/Navigation';
-import './App.css';
 import HomePage from './components/HomePage/HomePage';
 import LoginPage from './components/LoginPage/LoginPage';
 import SignUp from './components/SignUp/SignUp';
 import Footer from './components/Footer/Footer.jsx';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <AppContextProvider>
+    <AppContextProvider>
+      <BrowserRouter>
         <Navigation />
-        <HomePage />
-        {/* <LoginPage />
-        <SignUp />
-        <ContextDemo /> */}
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/signup" component={SignUp} />
+        </Switch>
         <Footer />
-      </AppContextProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </AppContextProvider>
   );
 };
 
