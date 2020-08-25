@@ -1,37 +1,42 @@
 import React from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import { Nav } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import '../Footer/Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <h3>JOIN OUR MAILING LIST</h3>
-      <p>SPLIT BILL GOES HERE</p>
-      <Form className="footer-form">
-        <div className="inputs">
-          <Form.Group controlId="formBasicName" className="input-box">
-            <Form.Control type="name" placeholder="Enter your Name" />
-          </Form.Group>
-
-          <Form.Group controlId="formBasicEmail" className="input-box">
-            <Form.Control type="email" placeholder="Enter your Email" />
-          </Form.Group>
-        </div>
-        <div className="submit-agreement">
-          <Form.Group controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Sign me up" />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
-          </Form.Group>
-
-          <Button variant="primary" type="submit" className="submit_button">
-            Submit
-          </Button>
-        </div>
-      </Form>
-    </footer>
+    <Nav className="footer">
+      <Nav.Link href="https://github.com/Jeanniet89" target="_blank">
+        <Button id="button" variant="dark">
+          Jeannie
+        </Button>
+      </Nav.Link>
+      <Nav.Link href="https://github.com/iamsam14" target="_blank">
+        <Button id="button" variant="dark">
+          Samuel
+        </Button>
+      </Nav.Link>
+      <Nav.Link href="https://github.com/Rrudy0513" target="_blank">
+        <Button id="button" variant="dark">
+          Rodolfo
+        </Button>
+      </Nav.Link>
+      <Nav.Link href="https://github.com/cescamar" target="_blank">
+        <Button id="button" variant="dark">
+          Francesca
+        </Button>
+      </Nav.Link>
+      <Nav.Link href="/" target="_blank">
+        <Button id="button" variant="dark">
+          Sylvia
+        </Button>
+      </Nav.Link>
+      <Nav.Link href="/" target="_blank">
+        <Button id="button" variant="dark">
+          Kevin
+        </Button>
+      </Nav.Link>
+    </Nav>
   );
 };
 
