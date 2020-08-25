@@ -1,21 +1,28 @@
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import Logo from '../assets/Logo.png';
 
 const Navigation = () => {
   return (
     <Navbar className="justify-content-between">
       <Navbar.Brand href="./">
-        <img src="/logo.svg" width="30" height="30" alt="Cuentalogo" />
+        <img
+          src={Logo}
+          alt="Cuentalogo"
+          style={{
+            width: '100px'
+          }}
+        />
       </Navbar.Brand>
       <Nav>
         <Nav.Item>
-          <Button href="./login" variant="link">
+          <Button id="button" href="./login" variant="link">
             Log In
           </Button>
         </Nav.Item>
         <Nav.Item>
-          <Button href="./signup" variant="outline-primary">
+          <Button href="./signup" id="button" variant="dark">
             Sign Up
           </Button>
         </Nav.Item>

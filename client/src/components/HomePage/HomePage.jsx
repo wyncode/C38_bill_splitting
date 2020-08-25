@@ -1,10 +1,10 @@
 import React from 'react';
 import { Jumbotron, Button } from 'react-bootstrap';
-import './HomePage.css';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
-    <Jumbotron id="jumbo" border="primary">
+    <Jumbotron>
       <div className="homepage">
         <h1>Splitting a bill has never been easier.</h1>
         <p>
@@ -12,9 +12,11 @@ const HomePage = () => {
         </p>
         <p>
           <>
-            <Button variant="dark" size="lg" block>
-              Split your button
-            </Button>
+            <Link to="/billpage">
+              <Button id="button" variant="dark" size="lg" block>
+                Split the BILL
+              </Button>
+            </Link>
           </>
         </p>
       </div>
