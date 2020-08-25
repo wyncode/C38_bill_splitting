@@ -59,7 +59,9 @@ const SignUp = ({ history }) => {
           />
         </Form.Group>
         <Form.Group className="d-flex justify-content-center">
-          <Button type="submit">Login</Button>
+          <Button id="button" variant="dark" type="submit">
+            Login
+          </Button>
         </Form.Group>
       </Form>
       <Link className="mt-2" to="/login">

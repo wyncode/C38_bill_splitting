@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+/* Homepage css */
+h1 {
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px !important;
+  font-weight: bold !important;
+}
+
+p {
+  margin: 10px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.page-container {
+  display: 'flex';
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  flex: 1;
+}
+
+/* button hover style */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+#button {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+#button:hover {
+  background: #fca311;
+  color: #050801;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+#button span {
+  position: absolute;
+  display: block;
+}
