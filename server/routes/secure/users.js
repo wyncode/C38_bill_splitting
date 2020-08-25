@@ -1,6 +1,15 @@
 const router = require('express').Router(),
   cloudinary = require('cloudinary').v2,
-  User = require('../../db/models/user');
+  User = require('../../db/models/user'),
+  isAdmin = require('../../middleware/authorization/index');
+
+router.get('/api/admin', isAdmin(), async (req, res) => {
+  try {
+    res.json({ message: 'admin user' });
+  } catch (error) {
+    res.status(401).json({ error: error.toString() });
+  }
+});
 
 router.get('/api/users/me', async (req, res) => res.json(req.user));
 
@@ -53,6 +62,17 @@ router.put('/api/password', async (req, res) => {
     res.json({ message: 'password updated successfully' });
   } catch (e) {
     res.json({ error: e.toString() });
+  }
+});
+
+router.delete('/api/users/me', async (req, res) => {
+  try {
+    await req.user.remove();
+    sendCancellationEmail(req.user.email, req.user.name);
+    res.clearCookie('jwt');
+    res.json({ message: 'user deleted' });
+  } catch (error) {
+    res.status(500).json({ error: e.toString() });
   }
 });
 

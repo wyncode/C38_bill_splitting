@@ -51,6 +51,11 @@ const userSchema = new mongoose.Schema(
     ],
 
     billHistory: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Bill' }],
+    admin: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
     tokens: [
       {
         token: {

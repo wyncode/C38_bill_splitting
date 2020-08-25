@@ -5,7 +5,15 @@ const router = require('express').Router(),
 router.get('/api/bill/me', async (req, res) => res.json(req.bill));
 
 router.post('/api/bill/me', async (req, res) => {
-  const { amountDue, party, billDate, taxes, gratuity } = req.body;
+  const {
+    amountDue,
+    party,
+    billDate,
+    taxes,
+    gratuity,
+    paymentStatus,
+    madePayment,
+  } = req.body;
   try {
     const bill = new Bill({
       amountDue,
@@ -13,20 +21,22 @@ router.post('/api/bill/me', async (req, res) => {
       billDate,
       taxes,
       gratuity,
+      paymentStatus,
+      madePayment,
     });
     await bill.save();
-    const newBillID = new Bill(req.params._id);
-    console.log(newBillID);
-    return (
-      User.findById(req.params._id).then((newID) => {
-        newBillID.save().then((createdBillID) => {
-          newID._id.push(createdBillID._id);
-        });
-      }),
-      res.status(201).json(bill)
-    );
+    const newBill = new Bill(req.body);
+    newBill.party = req.params._id;
+
+    let user = await User.findById(req.user._id);
+    let createdBill = await newBill.save();
+    await console.log(user.billHistory);
+    await user.billHistory.push(createdBill._id);
+    await console.log(createdBill.id);
+    await user.save();
+    res.status(201).json(bill);
   } catch (error) {
-    res.status(400).json({ error: e.toString() });
+    res.status(400).json({ error: error.toString() });
   }
 });
 
