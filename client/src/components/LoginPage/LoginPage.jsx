@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Form, Button } from 'react-bootstrap';
 // import { AppContext } from '../context/AppContext';
 // import axios from 'axios';
 
 const LoginPage = () => {
-  // const [formData, setFormData] = useState(null);
+  const [formData, setFormData] = useState(null);
   // const { setCurrentUser } = useContext(AppContext);
 
-  // const handleChange = (event) => {
-  //   setFormData({ ...formData, [event.target.name]: event.target.value });
-  // };
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
 
   // const handleSubmit = (event) => {
   //   event.preventDefault();
@@ -35,6 +35,7 @@ const LoginPage = () => {
             type="email"
             placeholder="Email Address"
             name="email"
+            onChange={handleChange}
           />
         </Form.Group>
         <Form.Group>
@@ -44,6 +45,7 @@ const LoginPage = () => {
             type="password"
             placeholder="Password"
             name="password"
+            onChange={handleChange}
           />
         </Form.Group>
         <Form.Group className="d-flex justify-content-center">

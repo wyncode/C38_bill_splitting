@@ -1,6 +1,5 @@
 import React from 'react';
 import { Jumbotron, Button } from 'react-bootstrap';
-import Photo1 from './Photo1.jpg';
 import './HomePage.css';
 
 const HomePage = () => {
