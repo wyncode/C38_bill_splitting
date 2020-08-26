@@ -1,33 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Form, Button } from 'react-bootstrap';
-// import { AppContext } from '../context/AppContext';
-// import axios from 'axios';
+import { AppContext } from '../../context/AppContext';
+import axios from 'axios';
 
-const SignUp = ({ history }) => {
+const SignUpPage = ({ history }) => {
   const [formData, setFormData] = useState(null);
-  // const { setCurrentUser } = useContext(AppContext);
+  const { setCurrentUser } = useContext(AppContext);
 
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   axios
-  //     .post('/api/users/', formData)
-  //     .then((response) => {
-  //       sessionStorage.setItem('user', response.data);
-  //       setCurrentUser(response.data);
-  //       history.push('/');
-  //     })
-  //     .catch((error) => console.log(error));
-  // };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    axios
+      .post('/api/users/', formData)
+      .then((response) => {
+        sessionStorage.setItem('user', response.data);
+        setCurrentUser(response.data);
+        history.push('/');
+      })
+      .catch((error) => console.log(error, 'Sign up error'));
+  };
 
   return (
     <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
-      <h1 className="mb-4">Create a CUENTA Account Now</h1>
-      <Form style={{ width: 300 }}>
+      <h1 className="mb-4 text-center">Create a CUENTA Account Now</h1>
+      <Form style={{ width: 300 }} onSubmit={handleSubmit}>
         <Form.Group>
           <Form.Label htmlFor="fullName">Full Name</Form.Label>
           <Form.Control
@@ -60,7 +60,7 @@ const SignUp = ({ history }) => {
         </Form.Group>
         <Form.Group className="d-flex justify-content-center">
           <Button id="button" variant="dark" type="submit">
-            Login
+            Create Account
           </Button>
         </Form.Group>
       </Form>
@@ -71,4 +71,4 @@ const SignUp = ({ history }) => {
   );
 };
 
-export default SignUp;
+export default SignUpPage;

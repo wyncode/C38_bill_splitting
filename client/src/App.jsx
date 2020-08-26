@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { AppContextProvider } from './context/AppContext';
 import Navigation from './components/Navigation';
+import PrivateRoute from './components/PrivateRoutes';
 import HomePage from './components/HomePage/HomePage';
 import LoginPage from './components/LoginPage/LoginPage';
-import SignUp from './components/SignUp/SignUp';
-import Footer from './components/Footer/Footer.jsx';
+import SignUpPage from './components/SignUpPage/SignUpPage';
 import BillPage from './components/BillPage/BillPage';
+import TestHome from './components/HomePage/TestHome';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -20,12 +21,14 @@ const App = () => {
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/login" component={LoginPage} />
-              <Route exact path="/signup" component={SignUp} />
+              <Route exact path="/signup" component={SignUpPage} />
               <Route exact path="/billpage" component={BillPage} />
+              <Route exact path="/testhome" component={TestHome} />
+              <PrivateRoute exact path="/home" component={TestHome} />
+              {/* <PrivateRoute exact path="/profile" component={Profile} /> */}
             </Switch>
           </BrowserRouter>
         </AppContextProvider>
-        <Footer />
       </div>
     </div>
   );
