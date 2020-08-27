@@ -11,8 +11,6 @@ router.get('/api/admin', isAdmin(), async (req, res) => {
   }
 });
 
-router.get('/api/users/me', async (req, res) => res.json(req.user));
-
 router.patch('/api/users/me', async (req, res) => {
   const updates = Object.keys(req.body);
   const allowedUpdates = ['name', 'email', 'password', 'avatar', 'payment'];

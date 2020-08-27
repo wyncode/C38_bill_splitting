@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Container, Form, Button } from 'react-bootstrap';
 import { AppContext } from '../../context/AppContext';
 import axios from 'axios';
+import swal from 'sweetalert';
+import Navigation from '../Navigation';
 
 const SignUpPage = ({ history }) => {
   const [formData, setFormData] = useState(null);
@@ -21,53 +23,57 @@ const SignUpPage = ({ history }) => {
         setCurrentUser(response.data);
         history.push('/');
       })
-      .catch((error) => console.log(error, 'Sign up error'));
+      .catch((error) => swal('Error', 'Please check the inputs', 'warning'));
   };
 
   return (
-    <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
-      <h1 className="mb-4 text-center">Create a CUENTA Account Now</h1>
-      <Form style={{ width: 300 }} onSubmit={handleSubmit}>
-        <Form.Group>
-          <Form.Label htmlFor="fullName">Full Name</Form.Label>
-          <Form.Control
-            id="fullName"
-            type="text"
-            placeholder="Full Name"
-            name="name"
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label htmlFor="email">Email Address</Form.Label>
-          <Form.Control
-            id="email"
-            type="email"
-            placeholder="Email Address"
-            name="email"
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label htmlFor="password">Password</Form.Label>
-          <Form.Control
-            id="password"
-            type="password"
-            placeholder="Password"
-            name="password"
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group className="d-flex justify-content-center">
-          <Button id="button" variant="dark" type="submit">
-            Create Account
-          </Button>
-        </Form.Group>
-      </Form>
-      <Link className="mt-2" to="/login">
-        Already a member? Login.
-      </Link>
-    </Container>
+    <>
+      <Navigation />
+
+      <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
+        <h1 className="mb-4 text-center">Create a CUENTA Account Now</h1>
+        <Form style={{ width: 300 }} onSubmit={handleSubmit}>
+          <Form.Group>
+            <Form.Label htmlFor="fullName">Full Name</Form.Label>
+            <Form.Control
+              id="fullName"
+              type="text"
+              placeholder="Full Name"
+              name="name"
+              onChange={handleChange}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="email">Email Address</Form.Label>
+            <Form.Control
+              id="email"
+              type="email"
+              placeholder="Email Address"
+              name="email"
+              onChange={handleChange}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="password">Password</Form.Label>
+            <Form.Control
+              id="password"
+              type="password"
+              placeholder="Password"
+              name="password"
+              onChange={handleChange}
+            />
+          </Form.Group>
+          <Form.Group className="d-flex justify-content-center">
+            <Button id="button" variant="dark" type="submit">
+              Create Account
+            </Button>
+          </Form.Group>
+        </Form>
+        <Link className="mt-2" to="/login">
+          Already a member? Login.
+        </Link>
+      </Container>
+    </>
   );
 };
 

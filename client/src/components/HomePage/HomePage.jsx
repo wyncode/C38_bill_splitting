@@ -2,10 +2,14 @@ import React from 'react';
 import { Jumbotron, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Footer from '../Footer/Footer';
+import Navigation from '../Navigation';
+
+// LANDING PAGE
 
 const HomePage = () => {
   return (
     <>
+      <Navigation />
       <Jumbotron>
         <div className="homepage">
           <h1>Splitting a bill has never been easier.</h1>
