@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { AppContextProvider } from './context/AppContext';
 import Navigation from './components/Navigation';
-import HomePage from './components/HomePage/HomePage';
-import LoginPage from './components/LoginPage/LoginPage';
-import SignUp from './components/SignUp/SignUp';
-import Footer from './components/Footer/Footer.jsx';
-import BillPage from './components/BillPage/BillPage';
+import LandingPage from './pages/LandingPage';
+import LoginPage from './pages/LoginPage';
+import SignUp from './pages/SignUp';
+import Footer from './components/Footer';
+import BillPage from './pages/BillPage';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
@@ -18,7 +17,7 @@ const App = () => {
           <BrowserRouter>
             <Navigation />
             <Switch>
-              <Route exact path="/" component={HomePage} />
+              <Route exact path="/" component={LandingPage} />
               <Route exact path="/login" component={LoginPage} />
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/billpage" component={BillPage} />

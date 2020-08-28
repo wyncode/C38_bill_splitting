@@ -14,7 +14,7 @@ const HomeCarousel = () => {
             src={Deal1}
             alt="First slide"
             style={{
-              height: '30vh',
+              height: '100vh',
               position: 'relative',
               fontWeight: 'bold'
             }}
@@ -30,7 +30,7 @@ const HomeCarousel = () => {
             src={Deal2}
             alt="Third slide"
             style={{
-              height: '30vh',
+              height: '100vh',
               position: 'relative',
               fontWeight: 'bold'
             }}
@@ -46,7 +46,7 @@ const HomeCarousel = () => {
             src={Deal3}
             alt="Third slide"
             style={{
-              height: '30vh',
+              height: '100vh',
               position: 'relative',
               fontWeight: 'bold'
             }}
