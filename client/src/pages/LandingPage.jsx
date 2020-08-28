@@ -1,11 +1,11 @@
 import React from 'react';
 import { Jumbotron, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import UserBenefits from '../UserBenefits';
-import UserSteps from '../UserSteps';
-import HomeCarousel from '../HomeCarousel';
+import UserBenefits from '../components/UserBenefits';
+import UserSteps from '../components/UserSteps';
+import HomeCarousel from '../components/HomeCarousel';
 
-const HomePage = () => {
+const LandingPage = () => {
   return (
     <div>
       <Jumbotron>
@@ -32,4 +32,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default LandingPage;

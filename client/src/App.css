@@ -1,8 +1,18 @@
 /* @media (min-withd:576px, 768px, 992px, 1200px); */
+.fullscreen {
+  height: 100vh;
+}
+
+.badge-xl {
+  font-size: 18px;
+}
 
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
 /* Homepage css */
 h1 {
@@ -25,7 +35,16 @@ p {
 .btn-primary:visited {
   background-color: #1840d9 !important;
 } */
+/* App css */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
+.content-wrap {
+  flex: 1;
+}
 /* button hover style */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
