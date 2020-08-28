@@ -10,7 +10,7 @@ const HomeNavigation = () => {
     <>
       <Navbar bg="light" expand="lg">
         {/* TODO: need to go to home without logging out */}
-        <Navbar.Brand href="./">
+        <Navbar.Brand href="./testhome">
           <img
             src={Logo}
             alt="Cuentalogo"

@@ -6,7 +6,7 @@ const express = require('express'),
   cookieParser = require('cookie-parser'),
   bodyParser = require('body-parser'),
   userRouter = require('./routes/secure/users'),
-  billRouter = require('./routes/secure/Bills');
+  billRouter = require('./routes/secure/bills');
 
 // Parse incoming JSON into objects
 app.use(express.json());

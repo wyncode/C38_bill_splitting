@@ -22,7 +22,7 @@ const Navigation = () => {
           </Button>
         </Nav.Item>
         <Nav.Item>
-          <Button href="./signup" id="button" variant="dark">
+          <Button href="./signup" id="button" variant="outline-primary">
             Sign Up
           </Button>
         </Nav.Item>

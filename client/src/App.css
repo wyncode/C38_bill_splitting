@@ -1,3 +1,5 @@
+/* @media (min-withd:576px, 768px, 992px, 1200px); */
+
 body {
   margin: 0;
   padding: 0;
@@ -16,16 +18,13 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
 }
-
-.page-container {
-  display: 'flex';
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.content-wrap {
-  flex: 1;
-}
+/* To override bootstraps button */
+/* .btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: #1840d9 !important;
+} */
 
 /* button hover style */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
@@ -42,7 +41,7 @@ p {
 }
 
 #button:hover {
-  background: #fca311;
+  background: #41ccaa;
   color: #050801;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }

@@ -31,7 +31,7 @@ const SignUpPage = ({ history }) => {
       <Navigation />
 
       <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
-        <h1 className="mb-4 text-center">Create a CUENTA Account Now</h1>
+        <h2 className="mb-4 text-center">Sign up to Cuenta now!</h2>
         <Form style={{ width: 300 }} onSubmit={handleSubmit}>
           <Form.Group>
             <Form.Label htmlFor="fullName">Full Name</Form.Label>

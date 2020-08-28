@@ -4,6 +4,7 @@ import { Container, Form, Button } from 'react-bootstrap';
 import { AppContext } from '../../context/AppContext';
 import axios from 'axios';
 import Navigation from '../Navigation';
+import './LoginPage.css';
 
 // import swal from 'sweetalert';
 
@@ -20,7 +21,7 @@ const LoginPage = ({ history }) => {
     axios.post('/api/users/login', formData).then((response) => {
       sessionStorage.setItem('user', response.data);
       setCurrentUser(response.data);
-      history.push('/');
+      history.push('/testhome');
     });
     // .catch(() => swal('Oops!', 'something went wrong', 'warning'));
   };
@@ -29,7 +30,11 @@ const LoginPage = ({ history }) => {
     <>
       <Navigation />
       <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
-        <h1 className="mb-4 text-center">Welcome to Cuenta</h1>
+        <h3 className="title">Welcome back!</h3>
+        <h8 className="ml-2 mr-4 mb-4 mt-1">
+          Make sure to checkout your daily rewards and discounts in your
+          dashboard
+        </h8>
         <Form style={{ width: 300 }} onSubmit={handleSubmit}>
           <Form.Group>
             <Form.Label htmlFor="email">Email Address</Form.Label>
@@ -50,19 +55,14 @@ const LoginPage = ({ history }) => {
               name="password"
               onChange={handleChange}
             />
+            <Link to="/testhome">Forgot password?</Link>
           </Form.Group>
           <Form.Group className="d-flex justify-content-center">
-            <Button id="button" variant="dark" type="submit">
+            <Button id="button" variant="dark" type="submit" block>
               Login
             </Button>
           </Form.Group>
         </Form>
-        <Link className="mt-1" to="/signup">
-          Need an Account? Sign Up.
-        </Link>
-        <Link className="mt-1" to="/">
-          Forgot your password? Click here.
-        </Link>
       </Container>
     </>
   );
