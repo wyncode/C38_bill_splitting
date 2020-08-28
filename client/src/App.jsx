@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { AppContextProvider } from './context/AppContext';
-import Navigation from './components/Navigation';
+// import Navigation from './components/Navigation';
 import LandingPage from './pages/LandingPage';
-import LoginPage from './pages/LoginPage';
+import Login from './pages/Login';
 import SignUp from './pages/SignUp';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import BillPage from './pages/BillPage';
+import Home from './pages/Home';
+import PrivateRoute from './components/PrivateRoutes';
+
 import './App.css';
 
 const App = () => {
@@ -15,16 +18,17 @@ const App = () => {
       <div className="content-wrap">
         <AppContextProvider>
           <BrowserRouter>
-            <Navigation />
+            {/* <Navigation /> */}
             <Switch>
               <Route exact path="/" component={LandingPage} />
-              <Route exact path="/login" component={LoginPage} />
+              <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/billpage" component={BillPage} />
+              <PrivateRoute exact path="/home" component={Home} />
+              {/* <PrivateRoute exact path="/profile" component={Profile} /> */}
             </Switch>
           </BrowserRouter>
         </AppContextProvider>
-        <Footer />
       </div>
     </div>
   );

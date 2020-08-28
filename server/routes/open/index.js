@@ -1,6 +1,8 @@
 const router = require('express').Router(),
   User = require('../../db/models/user');
 
+router.get('/api/users', async (req, res) => res.json(req.user));
+
 router.post('/api/users', async (req, res) => {
   const { name, email, password, payment, billHistory } = req.body;
   try {
