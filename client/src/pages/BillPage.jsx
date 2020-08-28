@@ -2,7 +2,7 @@ import React from 'react';
 import QrReader from 'react-qr-reader';
 //import { useHistory } from 'react-router-dom';
 
-const billPage = () => {
+const BillPage = () => {
   //const history = useHistory();
 
   function handleScan(event) {
@@ -27,4 +27,4 @@ const billPage = () => {
   );
 };
 
-export default billPage;
+export default BillPage;

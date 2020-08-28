@@ -1,15 +1,15 @@
 import React from 'react';
 import { Jumbotron, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Footer from '../Footer/Footer';
-import Navigation from '../Navigation';
-import UserBenefits from '../UserBenefits';
-import UserSteps from '../UserSteps';
-import HomeCarousel from '../HomeCarousel';
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
+import UserBenefits from '../components/UserBenefits';
+import UserSteps from '../components/UserSteps';
+import HomeCarousel from '../components/HomeCarousel';
 
 // LANDING PAGE
 
-const HomePage = () => {
+const LandingPage = () => {
   return (
     <>
       <Navigation />
@@ -42,4 +42,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default LandingPage;

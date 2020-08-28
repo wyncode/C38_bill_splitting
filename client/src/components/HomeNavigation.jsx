@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '../assets/Logo.png';
 import { Navbar, Nav, Dropdown, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import BillPage from './BillPage/BillPage';
+import BillPage from '../pages/BillPage';
 // import Logout from './Logout';
 
 const HomeNavigation = () => {
@@ -10,7 +10,7 @@ const HomeNavigation = () => {
     <>
       <Navbar bg="light" expand="lg">
         {/* TODO: need to go to home without logging out */}
-        <Navbar.Brand href="./testhome">
+        <Navbar.Brand href="./home">
           <img
             src={Logo}
             alt="Cuentalogo"
