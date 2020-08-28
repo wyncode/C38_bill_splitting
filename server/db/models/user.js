@@ -40,13 +40,12 @@ const userSchema = new mongoose.Schema(
       {
         creditCard: {
           type: String,
-          required: true,
           minlength: 16,
           maxlength: 16
         },
-        ccv: { type: String, required: true, minlength: 3, maxlength: 3 },
-        expiration: { type: Date, required: true },
-        zipCode: { type: String, required: true, minlength: 5, maxlength: 5 }
+        ccv: { type: String, minlength: 3, maxlength: 3 },
+        expiration: { type: Date },
+        zipCode: { type: String, minlength: 5, maxlength: 5 }
       }
     ],
 
