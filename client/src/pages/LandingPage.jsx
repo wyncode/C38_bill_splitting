@@ -13,7 +13,6 @@ const LandingPage = () => {
   return (
     <>
       <Navigation />
-
       <div>
         <Jumbotron>
           <div className="homepage">

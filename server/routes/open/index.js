@@ -9,9 +9,9 @@ router.post('/api/users', async (req, res) => {
     const user = new User({
       name,
       email,
-      password,
-      payment,
-      billHistory
+      password
+      // payment,
+      // billHistory
     });
 
     const token = await user.generateAuthToken();
