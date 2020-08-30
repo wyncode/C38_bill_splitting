@@ -10,7 +10,9 @@ import './Login.css';
 
 const Login = ({ history }) => {
   const [formData, setFormData] = useState(null);
-  const { setCurrentUser } = useContext(AppContext);
+  const { setCurrentUser, currentUser } = useContext(AppContext);
+
+  console.log('what is the current user', currentUser);
 
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });

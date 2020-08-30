@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Container, Image, Button } from 'react-bootstrap';
-import Navigation from '../components/Navigation';
+import HomeNav from '../components/HomeNav';
 import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 
@@ -39,7 +39,7 @@ const Profile = ({ history }) => {
       setLoading(false);
       sessionStorage.removeItem('user');
       setCurrentUser(null);
-      history.push('/login');
+      history.push('/signup');
     } catch (error) {
       console.log(error.toString());
     }
@@ -47,7 +47,7 @@ const Profile = ({ history }) => {
 
   return (
     <>
-      <Navigation />
+      <HomeNav />
       <Container className="d-flex flex-column align-items-center justify-content-center">
         <h1>Your Profile</h1>
         <div>

@@ -4,9 +4,9 @@ import { AppContextProvider } from './context/AppContext';
 import LandingPage from './pages/LandingPage';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
-import BillPage from './pages/BillPage';
 import Home from './pages/Home';
 import PrivateRoute from './components/PrivateRoutes';
+import Profile from './pages/Profile';
 
 import './App.css';
 
@@ -20,9 +20,8 @@ const App = () => {
               <Route exact path="/" component={LandingPage} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={SignUp} />
-              <Route exact path="/billpage" component={BillPage} />
               <PrivateRoute exact path="/home" component={Home} />
-              {/* <PrivateRoute exact path="/profile" component={Profile} /> */}
+              <PrivateRoute exact path="/profile" component={Profile} />
             </Switch>
           </BrowserRouter>
         </AppContextProvider>

@@ -3,6 +3,7 @@ import { Route, Redirect } from 'react-router-dom';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const user = sessionStorage.getItem('user');
+  console.log('user', user);
   return (
     <Route
       {...rest}
