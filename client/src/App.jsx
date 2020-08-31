@@ -1,15 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { AppContextProvider } from './context/AppContext';
-// import Navigation from './components/Navigation';
 import LandingPage from './pages/LandingPage';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
-// import Footer from './components/Footer';
 import BillPage from './pages/BillPage';
 import Home from './pages/Home';
 import PrivateRoute from './components/PrivateRoutes';
-
 import './App.css';
 
 const App = () => {
@@ -18,7 +15,6 @@ const App = () => {
       <div className="content-wrap">
         <AppContextProvider>
           <BrowserRouter>
-            {/* <Navigation /> */}
             <Switch>
               <Route exact path="/" component={LandingPage} />
               <Route exact path="/login" component={Login} />

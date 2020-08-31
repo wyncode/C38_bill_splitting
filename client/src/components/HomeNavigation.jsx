@@ -1,5 +1,4 @@
 import React from 'react';
-import Logo from '../assets/Logo.png';
 import { Navbar, Nav, Dropdown, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import BillPage from '../pages/BillPage';
@@ -12,7 +11,7 @@ const HomeNavigation = () => {
         {/* TODO: need to go to home without logging out */}
         <Navbar.Brand href="./home">
           <img
-            src={Logo}
+            src={'https://res.cloudinary.com/jeanniet89/image/upload/v1598582455/cuentaLogo.png'}
             alt="Cuentalogo"
             style={{
               width: '100px'
