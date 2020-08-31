@@ -1,6 +1,6 @@
-const router = require('express').Router(),
+const { welcomeText } = require('../../db/twilio/send_sms'),
+  router = require('express').Router(),
   cloudinary = require('cloudinary').v2,
-  User = require('../../db/models/user'),
   isAdmin = require('../../db/middleware/authorization/authorization');
 
 router.get('/api/admin', isAdmin(), async (req, res) => {
@@ -13,12 +13,14 @@ router.get('/api/admin', isAdmin(), async (req, res) => {
 
 router.patch('/api/users/me', async (req, res) => {
   const updates = Object.keys(req.body);
-  const allowedUpdates = ['name', 'email', 'password', 'avatar', 'payment'];
+  const allowedUpdates = ['name', 'email', 'password', 'avatar', 'phoneNumber'];
   const isValidOperation = updates.every((update) =>
     allowedUpdates.includes(update)
   );
   if (!isValidOperation)
     return res.status(400).send({ error: 'invalid update!' });
+  if (updates.includes('phoneNumber'))
+    welcomeText(req.body.phoneNumber), console.log(req.body.phoneNumber);
   try {
     updates.forEach((update) => (req.user[update] = req.body[update]));
     await req.user.save();
