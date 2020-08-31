@@ -1,5 +1,8 @@
 require('./db/config');
 const express = require('express'),
+  openRoutes = require('./routes/open'),
+  app = express(),
+  passport = require('./db/middleware/authentication/authentication'),
   cookieParser = require('cookie-parser'),
   bodyParser = require('body-parser'),
   openRoutes = require('./routes/open'),
