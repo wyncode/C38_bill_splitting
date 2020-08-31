@@ -5,6 +5,7 @@ const AppContext = createContext();
 
 const AppContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
+  const [loading, setLoading] = useState(false);
   const user = sessionStorage.getItem('user');
 
   useEffect(() => {
@@ -20,7 +21,9 @@ const AppContextProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         currentUser,
-        setCurrentUser
+        setCurrentUser,
+        loading,
+        setLoading
       }}
     >
       {children}

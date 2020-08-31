@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div>
       <Nav className="footer">
-        <Nav.Link href="https://github.com/Jeanniet89" target="_blank">
+        <Nav.Link href="./about" target="_blank">
           <Button id="button" variant="outline-primary">
             Jeannie
           </Button>

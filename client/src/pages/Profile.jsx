@@ -41,7 +41,7 @@ const Profile = ({ history }) => {
       setCurrentUser(null);
       history.push('/signup');
     } catch (error) {
-      console.log(error.toString());
+      console.log(error.toString('user is deleted'));
     }
   };
 

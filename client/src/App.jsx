@@ -7,6 +7,7 @@ import SignUp from './pages/SignUp';
 import Home from './pages/Home';
 import PrivateRoute from './components/PrivateRoutes';
 import Profile from './pages/Profile';
+import About from './pages/About';
 
 import './App.css';
 
@@ -20,6 +21,7 @@ const App = () => {
               <Route exact path="/" component={LandingPage} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={SignUp} />
+              <Route exact path="/about" component={About} />
               <PrivateRoute exact path="/home" component={Home} />
               <PrivateRoute exact path="/profile" component={Profile} />
             </Switch>
