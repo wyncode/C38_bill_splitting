@@ -21,7 +21,7 @@ const SignUpPage = ({ history }) => {
       .then((response) => {
         sessionStorage.setItem('user', response.data);
         setCurrentUser(response.data);
-        history.push('/');
+        history.push('/home');
       })
       .catch((error) => swal('Error', 'Please check the inputs', 'warning'));
   };

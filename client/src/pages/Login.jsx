@@ -4,15 +4,11 @@ import { Container, Form, Button } from 'react-bootstrap';
 import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 import Navigation from '../components/Navigation';
-import './Login.css';
-
-// import swal from 'sweetalert';
+import swal from 'sweetalert';
 
 const Login = ({ history }) => {
   const [formData, setFormData] = useState(null);
-  const { setCurrentUser, currentUser } = useContext(AppContext);
-
-  console.log('what is the current user', currentUser);
+  const { setCurrentUser } = useContext(AppContext);
 
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -20,12 +16,14 @@ const Login = ({ history }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post('/api/users/login', formData).then((response) => {
-      sessionStorage.setItem('user', response.data);
-      setCurrentUser(response.data);
-      history.push('/home');
-    });
-    // .catch(() => swal('Oops!', 'something went wrong', 'warning'));
+    axios
+      .post('/api/users/login', formData)
+      .then((response) => {
+        sessionStorage.setItem('user', response.data);
+        setCurrentUser(response.data);
+        history.push('/home');
+      })
+      .catch(() => swal('Oops!', 'something went wrong', 'warning'));
   };
 
   return (
@@ -33,10 +31,10 @@ const Login = ({ history }) => {
       <Navigation />
       <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
         <h3 className="title">Welcome back!</h3>
-        <h8 className="ml-2 mr-4 mb-4 mt-1">
+        <h6 className="ml-2 mr-4 mb-4 mt-1">
           Make sure to checkout your daily rewards and discounts in your
           dashboard
-        </h8>
+        </h6>
         <Form style={{ width: 300 }} onSubmit={handleSubmit}>
           <Form.Group>
             <Form.Label htmlFor="email">Email Address</Form.Label>

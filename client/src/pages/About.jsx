@@ -12,44 +12,69 @@ const About = () => {
   return (
     <>
       <Navigation />
-      <Container>
+      <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
         <Row>
           <CardDeck>
-            <Card border="primary" style={{ width: '18rem' }}>
+            <Card
+              className="mt-5 mb-2"
+              border="primary"
+              style={{ width: '18rem' }}
+            >
               <Card.Img variant="top" src="holder.js/100px160" />
-              <Card.Body className="mb-10">
+              <Card.Body>
                 <Card.Title className="about">Francesca Marquez</Card.Title>
                 <Card.Text>
                   This is a wider card with supporting text below as a natural
                   lead-in to additional content. This content is a little bit
-                  longer.
+                  longer.This is a wider card with supporting text below as a
+                  natural lead-in to additional content. This content is a
+                  little bit longer.This is a wider card with supporting text
+                  below as a natural lead-in to additional content. This content
+                  is a little bit longer.
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
                 <small className="text-muted">ICONS</small>
               </Card.Footer>
             </Card>
-            <Card border="success" style={{ width: '18rem' }}>
+            <Card
+              className="mt-5 mb-2"
+              border="success"
+              style={{ width: '18rem' }}
+            >
               <Card.Img variant="top" src="holder.js/100px160" />
               <Card.Body>
                 <Card.Title className="about">Jeannie Torres</Card.Title>
                 <Card.Text>
-                  This card has supporting text below as a natural lead-in to
-                  additional content.{' '}
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.This is a wider card with supporting text below as a
+                  natural lead-in to additional content. This content is a
+                  little bit longer.This is a wider card with supporting text
+                  below as a natural lead-in to additional content. This content
+                  is a little bit longer.
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
                 <small className="text-muted">ICONS</small>
               </Card.Footer>
             </Card>
-            <Card border="danger" style={{ width: '18rem' }}>
+            <Card
+              className="mt-5 mb-2"
+              border="danger"
+              style={{ width: '18rem' }}
+            >
               <Card.Img variant="top" src="holder.js/100px160" />
               <Card.Body>
                 <Card.Title className="about">Sylvia Robles</Card.Title>
                 <Card.Text>
                   This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This card has even longer
-                  content than the first to show that equal height action.
+                  lead-in to additional content. This content is a little bit
+                  longer.This is a wider card with supporting text below as a
+                  natural lead-in to additional content. This content is a
+                  little bit longer.This is a wider card with supporting text
+                  below as a natural lead-in to additional content. This content
+                  is a little bit longer.
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
@@ -58,45 +83,56 @@ const About = () => {
             </Card>
           </CardDeck>
         </Row>
-      </Container>
-      <Container>
         <Row>
           <CardDeck>
-            <Card border="primary" style={{ width: '18rem' }}>
+            <Card className="mt-5" border="primary" style={{ width: '18rem' }}>
               <Card.Img variant="top" src="holder.js/100px160" />
               <Card.Body>
                 <Card.Title className="about">Kevin Hermanni</Card.Title>
                 <Card.Text>
                   This is a wider card with supporting text below as a natural
                   lead-in to additional content. This content is a little bit
-                  longer.
+                  longer.This is a wider card with supporting text below as a
+                  natural lead-in to additional content. This content is a
+                  little bit longer.This is a wider card with supporting text
+                  below as a natural lead-in to additional content. This content
+                  is a little bit longer.
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
                 <small className="text-muted">ICONS</small>
               </Card.Footer>
             </Card>
-            <Card border="success" style={{ width: '18rem' }}>
+            <Card className="mt-5" border="success" style={{ width: '18rem' }}>
               <Card.Img variant="top" src="holder.js/100px160" />
               <Card.Body>
                 <Card.Title className="about">Samuel Robles</Card.Title>
                 <Card.Text>
-                  This card has supporting text below as a natural lead-in to
-                  additional content.{' '}
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.This is a wider card with supporting text below as a
+                  natural lead-in to additional content. This content is a
+                  little bit longer.This is a wider card with supporting text
+                  below as a natural lead-in to additional content. This content
+                  is a little bit longer.
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
                 <small className="text-muted">ICONS</small>
               </Card.Footer>
             </Card>
-            <Card border="danger" style={{ width: '18rem' }}>
+            <Card className="mt-5" border="danger" style={{ width: '18rem' }}>
               <Card.Img variant="top" src="holder.js/100px160" />
               <Card.Body>
                 <Card.Title className="about">Rodolfo Romero</Card.Title>
                 <Card.Text>
                   This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This card has even longer
-                  content than the first to show that equal height action.
+                  lead-in to additional content. This content is a little bit
+                  longer.This is a wider card with supporting text below as a
+                  natural lead-in to additional content. This content is a
+                  little bit longer.This is a wider card with supporting text
+                  below as a natural lead-in to additional content. This content
+                  is a little bit longer.
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
