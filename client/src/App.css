@@ -46,13 +46,14 @@ p {
   text-align: center;
 }
 
-.left {
+.homecircleimg {
 float: left;
 width: 40%;
 margin-right:2% ;
 background: url("https://res.cloudinary.com/jeanniet89/image/upload/a_35/v1598849792/Cuenta_ribbon_dotted_circle_cropped.png");
 height: 500px;
 background-size: cover;
+margin-left: -215px;
 }
 
 /* App css */
