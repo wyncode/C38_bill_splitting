@@ -1,7 +1,6 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-import './Footer.css';
 
 const Footer = () => {
   return (
@@ -37,13 +36,11 @@ const Footer = () => {
             Kevin
           </Button>
         </Nav.Link>
-      </Nav>
-      <div className="container" mt-4>
         <p justifyContent="center">
-          &copy;{new Date().getFullYear()} Cuenta INC | All right reserved |
-          Terms of Service | Privacy
+          &copy;{new Date().getFullYear()} Cuenta INC | Handcrafted with love by |
+          Contributors | 
         </p>
-      </div>
+      </Nav>
     </div>
   );
 };

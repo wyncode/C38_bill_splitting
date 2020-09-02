@@ -1,14 +1,14 @@
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-import Logo from '../assets/Logo.png';
+
 
 const Navigation = () => {
   return (
     <Navbar className="justify-content-between">
       <Navbar.Brand href="./">
         <img
-          src={Logo}
+          src={'https://res.cloudinary.com/jeanniet89/image/upload/v1598582455/Cuenta%20App/cuentaLogo.png'}
           alt="Cuentalogo"
           style={{
             width: '100px'
@@ -17,12 +17,12 @@ const Navigation = () => {
       </Navbar.Brand>
       <Nav>
         <Nav.Item>
-          <Button id="button" href="./login" variant="link">
+          <Button id="navbtn" href="./login" variant="link">
             Log In
           </Button>
         </Nav.Item>
         <Nav.Item>
-          <Button href="./signup" id="button" variant="outline-primary">
+          <Button href="./signup" id="navbtn" variant="outline-primary">
             Sign Up
           </Button>
         </Nav.Item>

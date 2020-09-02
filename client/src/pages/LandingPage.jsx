@@ -16,26 +16,34 @@ const LandingPage = () => {
       <div>
         <Jumbotron>
           <div className="homepage">
-            <h1>Splitting a bill has never been easier.</h1>
+            <h1 className="homepage">Splitting a bill has never been easier.</h1>
             <p>
               Scan the QR Code on your receipt, select your ordered items and
               pay!
             </p>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <p>
-              <>
                 <Link to="/billpage">
                   <Button id="button" variant="primary" size="lg" block>
                     Split your bill
                   </Button>
                 </Link>
-              </>
             </p>
           </div>
         </Jumbotron>
-        <Footer />
         <UserBenefits />
         <UserSteps />
         <HomeCarousel />
+        <Footer />
       </div>
     </>
   );

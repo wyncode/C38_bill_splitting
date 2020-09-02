@@ -3,10 +3,9 @@ import { IoMdContact } from 'react-icons/io';
 import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { SidebarData } from './Sidebardata';
-import './Navbar.css';
+import '../App.css';
 import { IconContext } from 'react-icons';
 import { Navbar } from 'react-bootstrap';
-import Logo from '../assets/Logo.png';
 
 function HomeNav() {
   const [sidebar, setSidebar] = useState(false);
@@ -18,7 +17,9 @@ function HomeNav() {
       <Navbar className="homenav justify-content-between">
         <Navbar.Brand href="./home">
           <img
-            src={Logo}
+            src={
+              'https://res.cloudinary.com/jeanniet89/image/upload/v1598582455/Cuenta%20App/cuentaLogo.png'
+            }
             alt="Cuentalogo"
             style={{
               width: '100px'

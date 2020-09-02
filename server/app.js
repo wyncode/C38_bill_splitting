@@ -6,10 +6,12 @@ const express = require('express'),
   bodyParser = require('body-parser'),
   openRoutes = require('./routes/open'),
   userRouter = require('./routes/secure/users'),
-  billRouter = require('./routes/secure/bills');
+  billRouter = require('./routes/secure/bills'),
+  braintreeRouter = require('./routes/secure/braintree');
 
 // Parse incoming JSON into objectsx
 app.use(express.json());
+app.use(braintreeRouter);
 
 app.use(openRoutes);
 app.use(bodyParser.urlencoded({ extended: false }));

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Carousel, Container } from 'react-bootstrap';
 import Deal1 from '../assets/Deal1.jpg';
 import Deal2 from '../assets/Deal2.jpg';
 import Deal3 from '../assets/Deal3.jpg';
@@ -7,6 +7,10 @@ import Deal3 from '../assets/Deal3.jpg';
 const HomeCarousel = () => {
   return (
     <div>
+      <Container>
+      <h1>Cuenta Rewards</h1>
+      <h5>Become a member and unlock rewards in your neighborhood.</h5>
+      </Container>
       <Carousel>
         <Carousel.Item>
           <img
@@ -14,7 +18,7 @@ const HomeCarousel = () => {
             src={Deal1}
             alt="First slide"
             style={{
-              height: '100vh',
+              height: '80vh',
               position: 'relative',
               fontWeight: 'bold'
             }}
@@ -30,7 +34,7 @@ const HomeCarousel = () => {
             src={Deal2}
             alt="Third slide"
             style={{
-              height: '100vh',
+              height: '80vh',
               position: 'relative',
               fontWeight: 'bold'
             }}
@@ -46,7 +50,7 @@ const HomeCarousel = () => {
             src={Deal3}
             alt="Third slide"
             style={{
-              height: '100vh',
+              height: '80vh',
               position: 'relative',
               fontWeight: 'bold'
             }}

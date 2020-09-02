@@ -6,7 +6,7 @@ import { Row, Container } from 'react-bootstrap';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 
-import './About.css';
+import '../App.css';
 
 const About = () => {
   return (

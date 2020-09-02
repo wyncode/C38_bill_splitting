@@ -7,14 +7,23 @@
   font-size: 18px;
 }
 
-/* body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
+/* Homepage css *
+
+/* .jumbobtn {
+position: absolute;
+margin-bottom: 0;
+margin-top: 0;
 } */
-/* Homepage css */
+
+.jumbotron {
+  background: url('https://res.cloudinary.com/jeanniet89/image/upload/c_limit,w_1646/v1598822801/Cuenta%20App/Hero_graphic_q2l7e7.png')
+    top center;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0px !important;
+}
+
 h1 {
   margin-left: 10px;
   font-family: Arial, Helvetica, sans-serif;
@@ -28,13 +37,26 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
 }
-/* To override bootstraps button */
-/* .btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:visited {
-  background-color: #1840d9 !important;
-} */
+
+.hometext {
+  color: #1840d9;
+}
+
+.usertext {
+  color: #1840d9;
+  text-align: center;
+}
+
+.homecircleimg {
+  float: left;
+  width: 40%;
+  margin-right: 2%;
+  background: url('https://res.cloudinary.com/jeanniet89/image/upload/a_35/v1598849792/Cuenta_ribbon_dotted_circle_cropped.png');
+  height: 500px;
+  background-size: cover;
+  margin-left: -215px;
+}
+
 /* App css */
 /* .page-container {
   display: flex;
@@ -44,15 +66,18 @@ p {
 
 .content-wrap {
   flex: 1;
-} */
+}
+
 /* button hover style */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 #button {
+  color: #ffffff;
+  background-color: #1840d9;
   position: relative;
   display: inline-block;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: uppercase !important;
   transition: 0.5s;
   letter-spacing: 1px;
   overflow: hidden;
@@ -60,12 +85,156 @@ p {
 }
 
 #button:hover {
-  background: #41ccaa;
-  color: #050801;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  background: #41ccaa !important;
+  color: #050801 !important;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005) !important;
 }
 
 #button span {
   position: absolute;
   display: block;
+}
+
+#navbtn {
+  color: #1840d9;
+  position: relative;
+  text-decoration: none;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+#navbtn:hover {
+  background: #41ccaa !important;
+  color: #050801 !important;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005) !important;
+}
+
+.footer {
+  background-color: #1840d9;
+  position: relative;
+  justify-content: center;
+  bottom: 0;
+  padding-top: 4rem;
+  width: 100%;
+}
+
+/* /* Signup css * */
+
+/* /* Home css * */
+
+.title {
+  font-size: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #1840d9;
+}
+
+p {
+  margin-left: 10px;
+}
+
+.titletwo {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+/* About Page css  */
+
+.about {
+  color: #41ccaa;
+  text-align: center;
+}
+
+/* Login Page css  */
+
+.container {
+  background-image: url(https://res.cloudinary.com/jeanniet89/image/upload/v1599010931/download_hpqj8m.png);
+  background-size: 450px;
+  background-repeat: no-repeat;
+  background-position: 25px -20px;
+}
+
+/* Sidebar Nav */
+
+.homenav {
+  background-color: #fff;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 50%;
+}
+
+.menu-bars {
+  margin-left: 11rem;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+.menu-bars1 {
+  margin-left: 7rem;
+  font-size: 1.5rem;
+  background: none;
+  color: white !important;
+}
+
+.nav-menu {
+  background-color: #41ccaa;
+  width: 150px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 100%;
+  transition: 850ms;
+}
+
+.nav-menu.active {
+  right: 0;
+  transition: 350ms;
+}
+
+.nav-text {
+  display: flex;
+  color: #ffffff;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+
+.nav-text a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.nav-text a:hover {
+  background-color: #1a83ff;
+}
+
+.nav-menu-items {
+  width: 100%;
+}
+
+.navbar-toggle {
+  background-color: #41ccaa;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+span {
+  margin-left: 16px;
 }

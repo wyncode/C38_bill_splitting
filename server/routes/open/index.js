@@ -1,12 +1,15 @@
 const router = require('express').Router(),
-  User = require('../../db/models/user');
+  jwt = require('jsonwebtoken'),
+  { sendWelcomeEmail, forgotPasswordEmail } = require('../../db/emails/emails');
+User = require('../../db/models/user');
 
-router.get('/api/users', async (req, res) => res.json(req.user));
-
-router.post('/api/users', async (req, res) => {
-  const { name, email, password, payment, billHistory } = req.body;
+router.post('/api/users/', async (req, res) => {
+  const { name, email, password } = req.body;
+  let user = await User.findOne({ email });
+  if (user)
+    throw new Error('an account already exists associated with that email');
   try {
-    const user = new User({
+    user = new User({
       name,
       email,
       password
@@ -20,9 +23,10 @@ router.post('/api/users', async (req, res) => {
       sameSite: 'Strict',
       secure: process.env.NODE_ENV !== 'production' ? false : true
     });
+    sendWelcomeEmail(user.email, user.name);
     res.status(201).json(user);
-  } catch (e) {
-    res.status(400).json({ error: e.toString() });
+  } catch (error) {
+    res.status(401).json({ error: error.toString() });
   }
 });
 
