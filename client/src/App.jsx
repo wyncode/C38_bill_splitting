@@ -11,7 +11,7 @@ import './App.css';
 
 const App = () => {
   return (
-    <div className="page-container">
+    <div className="container-fluid">
       <div className="content-wrap">
         <AppContextProvider>
           <BrowserRouter>

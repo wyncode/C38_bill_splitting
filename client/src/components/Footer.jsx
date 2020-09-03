@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 const Footer = () => {
   return (
     <div>
-      <Nav className="footer">
+      <Nav className="footer mt-4">
         <Nav.Link href="https://github.com/Jeanniet89" target="_blank">
           <Button id="button" variant="outline-primary">
             Jeannie
