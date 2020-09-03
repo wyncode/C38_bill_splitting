@@ -1,54 +1,158 @@
-/* @media (min-withd:576px, 768px, 992px, 1200px); */
-/* .fullscreen {
-  height: 100vh; */
-/* } */
+.fullscreen {
+  height: 100vh;
+}
+
 
 .badge-xl {
   font-size: 18px;
 }
 
-/* Homepage css *
+/* Homepage/Landingpage css */
 
-/* .jumbobtn {
-position: absolute;
-margin-bottom: 0;
-margin-top: 0;
-} */
+.jumbobtn {
+  position: absolute;
+  height: 44px;
+  top: 530px;
+}
 
 .jumbotron {
   background: url('https://res.cloudinary.com/jeanniet89/image/upload/c_limit,w_1646/v1598822801/Cuenta%20App/Hero_graphic_q2l7e7.png')
-    top center;
-  height: 500px;
+  height: 650px;
   background-size: cover;
   background-position: center;
-  border-radius: 0px !important;
+  position: relative;
 }
 
-h1 {
-  margin-left: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 35px !important;
-  font-weight: bold !important;
+.homejumbotitle {
+  position: absolute;
+  top: 60px;
+  color: #1840d9;
+  width: 338px;
+  font-family: 'Poppins' sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
 }
 
-p {
-  margin: 10px;
-  text-align: left;
-  font-family: Arial, Helvetica, sans-serif;
+.homejumbotext {
+  position: absolute;
+  top: 150px;
+  width: 330px;
+  font-family: 'Poppins' sans-serif;
+  font-style: normal;
   font-size: 18px;
+  color: #2e2e2e;
 }
 
-.hometext {
+.homepagetitles {
+  font-family: 'Poppins' sans-serif;
+  font-style: bold;
+  font-weight: 600;
+  color: #2e2e2e;
+}
+
+/* UserBenefits */
+
+/* .icon::before {
+  display: inline-block;
+  font-style: normal; 
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+Step 2: Reference Individual Icons
+.login::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "fas fa-cocktail"
+}
+
+Note: Make sure to include the correct weight and Unicode value for the icon
+.tps::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "fas fa-cocktail";
+}  */
+
+.benefittitle {
+  font-family: 'Poppins' sans-serif;
+  font-style: bold;
+  font-weight: 600;
+  font-size: 27px;
   color: #1840d9;
 }
 
-.usertext {
-  color: #1840d9;
-  text-align: center;
+.benefittext {
+  font-family: 'Poppins' sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #353535;
+}
+
+#benefitrewards {
+  flex-direction: column;
+  float: left;
+  margin-top: 60px;
+  padding: 5px;
+
 }
 
 .homecircleimg {
   float: left;
+
+  height: 600px;
+  background-size: cover;
+  padding: 5px;
+}
+
+/* UserSteps */
+
+.homepagetext {
+  font-family: 'Poppins' sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #353535;
+}
+
+.hometext {
+  font-family: 'Poppins' sans-serif;
+  font-style: bold;
+  font-weight: 600;
+  font-size: 27px;
+  color: #1840d9;
+}
+
+/* UserRewards */
+
+#rewardstext {
+  color: #41ccaa;
+  font-family: 'Poppins' sans-serif;
+  font-style: bold;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#rewardsbtn {
+  color: #1840d9;
+  /* position: relative; */
+  text-underline-position: below;
+  transition: 0.5s;
+  font-style: bold;
+  font-weight: 600;
+}
+
+#rewardsbtn:hover {
+  background: #41ccaa !important;
+  color: #050801 !important;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005) !important;
+}
+
+/* App css */
+
+.container-fluid {
   width: 40%;
   margin-right: 2%;
   background: url('https://res.cloudinary.com/jeanniet89/image/upload/a_35/v1598849792/Cuenta_ribbon_dotted_circle_cropped.png');
@@ -69,7 +173,6 @@ p {
 }
 
 /* button hover style */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 #button {
   color: #ffffff;
@@ -238,3 +341,4 @@ p {
 span {
   margin-left: 16px;
 }
+
