@@ -2,7 +2,6 @@
   height: 100vh;
 }
 
-
 .badge-xl {
   font-size: 18px;
 }
@@ -16,7 +15,7 @@
 }
 
 .jumbotron {
-  background: url('https://res.cloudinary.com/jeanniet89/image/upload/c_limit,w_1646/v1598822801/Cuenta%20App/Hero_graphic_q2l7e7.png')
+  background: url('https://res.cloudinary.com/jeanniet89/image/upload/c_limit,w_1646/v1598822801/Cuenta%20App/Hero_graphic_q2l7e7.png');
   height: 650px;
   background-size: cover;
   background-position: center;
@@ -96,7 +95,6 @@ Note: Make sure to include the correct weight and Unicode value for the icon
   float: left;
   margin-top: 60px;
   padding: 5px;
-
 }
 
 .homecircleimg {
@@ -341,4 +339,3 @@ p {
 span {
   margin-left: 16px;
 }
-
