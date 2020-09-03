@@ -4,7 +4,6 @@ import { Container, Form, Button } from 'react-bootstrap';
 import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 import Navigation from '../components/Navigation';
-import './Login.css';
 
 // import swal from 'sweetalert';
 
@@ -55,12 +54,19 @@ const Login = ({ history }) => {
               name="password"
               onChange={handleChange}
             />
-            <Link to="/needtofixthis">Forgot password?</Link>
           </Form.Group>
           <Form.Group className="d-flex justify-content-center">
             <Button id="button" variant="dark" type="submit" block>
               Login
             </Button>
+          </Form.Group>
+          <Form.Group>
+            <Link className="mb-5" to="/reset-password">
+              Forgot password?
+            </Link>
+          </Form.Group>
+          <Form.Group>
+            <Link to="/signup">Need an Account? Sign up.</Link>
           </Form.Group>
         </Form>
       </Container>

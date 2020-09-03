@@ -16,11 +16,12 @@ margin-top: 0;
 } */
 
 .jumbotron {
-background: url("https://res.cloudinary.com/jeanniet89/image/upload/c_limit,w_1646/v1598822801/Cuenta%20App/Hero_graphic_q2l7e7.png") top center;
-height: 500px;
-background-size: cover;
-background-position: center;
-border-radius: 0px !important;
+  background: url('https://res.cloudinary.com/jeanniet89/image/upload/c_limit,w_1646/v1598822801/Cuenta%20App/Hero_graphic_q2l7e7.png')
+    top center;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0px !important;
 }
 
 h1 {
@@ -38,22 +39,22 @@ p {
 }
 
 .hometext {
-  color: #1840d9;  
+  color: #1840d9;
 }
 
 .usertext {
-  color: #1840d9; 
+  color: #1840d9;
   text-align: center;
 }
 
 .homecircleimg {
-float: left;
-width: 40%;
-margin-right:2% ;
-background: url("https://res.cloudinary.com/jeanniet89/image/upload/a_35/v1598849792/Cuenta_ribbon_dotted_circle_cropped.png");
-height: 500px;
-background-size: cover;
-margin-left: -215px;
+  float: left;
+  width: 40%;
+  margin-right: 2%;
+  background: url('https://res.cloudinary.com/jeanniet89/image/upload/a_35/v1598849792/Cuenta_ribbon_dotted_circle_cropped.png');
+  height: 500px;
+  background-size: cover;
+  margin-left: -215px;
 }
 
 /* App css */
@@ -71,8 +72,8 @@ margin-left: -215px;
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 #button {
-  color:#ffffff;
-  background-color: #1840D9;
+  color: #ffffff;
+  background-color: #1840d9;
   position: relative;
   display: inline-block;
   text-decoration: none;
@@ -95,7 +96,7 @@ margin-left: -215px;
 }
 
 #navbtn {
-  color: #1840D9;
+  color: #1840d9;
   position: relative;
   text-decoration: none;
   transition: 0.5s;
@@ -103,13 +104,13 @@ margin-left: -215px;
 }
 
 #navbtn:hover {
-  background: #41CCAA !important;
+  background: #41ccaa !important;
   color: #050801 !important;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005) !important;
 }
 
 .footer {
-  background-color: #1840d9;  
+  background-color: #1840d9;
   position: relative;
   justify-content: center;
   bottom: 0;

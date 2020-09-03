@@ -5,8 +5,11 @@ import LandingPage from './pages/LandingPage';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import BillPage from './pages/BillPage';
-import Home from './pages/Home';
 import PrivateRoute from './components/PrivateRoutes';
+import Home from './pages/Home';
+import Profile from './pages/Profile';
+import ResetPassword from './pages/ResetPassword';
+import UpdatePassword from './pages/UpdatePassword';
 import './App.css';
 
 const App = () => {
@@ -20,8 +23,10 @@ const App = () => {
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/billpage" component={BillPage} />
+              <Route exact path="/reset-password" component={ResetPassword} />
+              <Route exact path="/update-password" component={UpdatePassword} />
               <PrivateRoute exact path="/home" component={Home} />
-              {/* <PrivateRoute exact path="/profile" component={Profile} /> */}
+              <PrivateRoute exact path="/profile" component={Profile} />
             </Switch>
           </BrowserRouter>
         </AppContextProvider>
