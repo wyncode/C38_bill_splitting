@@ -1,10 +1,8 @@
 import React from 'react';
 import QrReader from 'react-qr-reader';
-//import { useHistory } from 'react-router-dom';
+import HomeNav from '../components/HomeNav';
 
 const BillPage = () => {
-  //const history = useHistory();
-
   function handleScan(event) {
     console.log('Event: ', event);
     if (event !== null) {
@@ -17,6 +15,8 @@ const BillPage = () => {
 
   return (
     <div>
+      <HomeNav />
+
       <h1>QR Code</h1>
       <QrReader
         delay={1000}
