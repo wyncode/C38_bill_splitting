@@ -21,7 +21,7 @@ const SignUpPage = ({ history }) => {
       .then((response) => {
         sessionStorage.setItem('user', response.data);
         setCurrentUser(response.data);
-        history.push('/');
+        history.push('/home');
       })
       .catch((error) => swal('Error', 'Please check the inputs', 'warning'));
   };
@@ -30,8 +30,12 @@ const SignUpPage = ({ history }) => {
     <>
       <Navigation />
 
-      <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
-        <h2 className="mb-4 text-center">Sign up to Cuenta now!</h2>
+      <Container className=" container1 container d-flex flex-column align-items-center justify-content-center fullscreen">
+        <h2 className="title mb-2 text-left">Welcome to Cuenta!</h2>
+        <h6 className="mb-4 text-left">
+          As a Cuenta rewards member you'll earn exclusive discounts, offers,
+          access to giveaways and more.
+        </h6>
         <Form style={{ width: 300 }} onSubmit={handleSubmit}>
           <Form.Group>
             <Form.Label htmlFor="fullName">Full Name</Form.Label>
@@ -63,8 +67,14 @@ const SignUpPage = ({ history }) => {
               onChange={handleChange}
             />
           </Form.Group>
+          <Form.Group controlId="formBasicCheckbox">
+            <Form.Check
+              type="checkbox"
+              label="Yes, I would like to receive Cuenta email updates."
+            />
+          </Form.Group>
           <Form.Group className="d-flex justify-content-center">
-            <Button id="button" variant="dark" type="submit">
+            <Button id="button" variant="dark" type="submit" block>
               Create Account
             </Button>
           </Form.Group>
