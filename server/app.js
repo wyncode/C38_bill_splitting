@@ -7,6 +7,7 @@ const express = require('express'),
   openRoutes = require('./routes/open'),
   userRouter = require('./routes/secure/users'),
   billRouter = require('./routes/secure/bills'),
+  path = require('path'),
   braintreeRouter = require('./routes/secure/braintree');
 
 // Parse incoming JSON into objectsx
