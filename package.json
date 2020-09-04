@@ -5,6 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "@sendgrid/mail": "^7.2.4",
+    "@stripe/react-stripe-js": "^1.1.2",
+    "@stripe/stripe-js": "^1.9.0",
     "axios": "^0.20.0",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^4.5.2",
@@ -26,6 +28,7 @@
     "react-qr-reader": "^2.2.1",
     "sendgrid": "^5.2.3",
     "sweetalert": "^2.1.2",
+    "toast": "^0.2.10",
     "twilio": "^3.49.0",
     "validator": "^13.1.1"
   },
