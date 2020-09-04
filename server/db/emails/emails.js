@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const sgMail = require('@sendgrid/mail');
 const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
 
@@ -6,12 +8,13 @@ sgMail.setApiKey(SENDGRID_API_KEY);
 const sendWelcomeEmail = (email, name) => {
   const htmlEmail = `
   <style>
-  .sampleH1{
+  .title{
     color: grey;
   }
   </style>
-  <h1>Welcome to Cuenta</h1>
-  <div>Thank you for signing up for cuenta services</div>
+  <h1 class='title' >Welcome to Cuenta</h1>
+  <div>Thank you ${name} for signing up for cuenta services</div>
+
   `;
   sgMail.send({
     to: email,
@@ -45,7 +48,6 @@ const forgotPasswordEmail = (email, token) => {
     html: htmlEmail
   });
 };
-
 module.exports = {
   sendWelcomeEmail,
   sendCancellationEmail,
