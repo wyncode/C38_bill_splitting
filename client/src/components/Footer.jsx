@@ -37,8 +37,8 @@ const Footer = () => {
           </Button>
         </Nav.Link>
         <p justifyContent="center">
-          &copy;{new Date().getFullYear()} Cuenta INC | Handcrafted with love by |
-          Contributors | 
+          &copy;{new Date().getFullYear()} Cuenta INC | Handcrafted with love by
+          | Contributors |
         </p>
       </Nav>
     </div>
