@@ -5,10 +5,8 @@ import { Button } from 'react-bootstrap';
 const Footer = () => {
   return (
     <div>
-
       <Nav className="footer mt-4">
         <Nav.Link href="https://github.com/Jeanniet89" target="_blank">
-
           <Button id="button" variant="outline-primary">
             Jeannie
           </Button>
@@ -39,8 +37,8 @@ const Footer = () => {
           </Button>
         </Nav.Link>
         <p justifyContent="center">
-          &copy;{new Date().getFullYear()} Cuenta INC | Handcrafted with love by |
-          Contributors | 
+          &copy;{new Date().getFullYear()} Cuenta INC | Handcrafted with love by
+          | Contributors |
         </p>
       </Nav>
     </div>
