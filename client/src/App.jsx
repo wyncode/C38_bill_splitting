@@ -18,27 +18,19 @@ import { loadStripe } from '@stripe/stripe-js';
 const App = () => {
   const stripePromise = loadStripe(process.env.STRIPE_API_KEY);
   return (
-    <div className="container-fluid">
-      <div className="content-wrap">
-        <AppContextProvider>
-          <BrowserRouter>
-            <Switch>
-              <Route exact path="/" component={LandingPage} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/signup" component={SignUp} />
-              <Route exact path="/about" component={About} />
-              <PrivateRoute exact path="/home" component={Home} />
-              {/* <PrivateRoute exact path="/profile" component={Profile} /> */}
-              <Elements stripe={stripePromise}>
-                <Route path="/receipt" component={ReceiptPage} />
-              </Elements>
-              <PrivateRoute exact path="/profile" component={Profile} />
-              <PrivateRoute exact path="/billpage" component={BillPage} />
-            </Switch>
-          </BrowserRouter>
-        </AppContextProvider>
-      </div>
-    </div>
+    <AppContextProvider>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/about" component={About} />
+          <PrivateRoute exact path="/home" component={Home} />
+          <PrivateRoute exact path="/profile" component={Profile} />
+          <PrivateRoute exact path="/billpage" component={BillPage} />
+        </Switch>
+      </BrowserRouter>
+    </AppContextProvider>
   );
 };
 
