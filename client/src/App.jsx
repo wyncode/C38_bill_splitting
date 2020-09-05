@@ -6,13 +6,17 @@ import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Home from './pages/Home';
 import PrivateRoute from './components/PrivateRoutes';
+import ReceiptPage from './pages/ReceiptPage';
+import { Elements } from '@stripe/react-stripe-js';
 import Profile from './pages/Profile';
 import About from './pages/About';
 import BillPage from './pages/BillPage';
 
 import './App.css';
+import { loadStripe } from '@stripe/stripe-js';
 
 const App = () => {
+  const stripePromise = loadStripe(process.env.STRIPE_API_KEY);
   return (
     <AppContextProvider>
       <BrowserRouter>
