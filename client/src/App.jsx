@@ -16,7 +16,7 @@ import { ToastContainer } from 'react-toastify';
 import './App.css';
 import { loadStripe } from '@stripe/stripe-js';
 
-const stripePromise = loadStripe(process.env.STRIPE_API_KEY);
+const stripePromise = loadStripe(REACT_APP_STRIPE_PUBLIC_KEY);
 
 const App = () => {
   return (

@@ -1,15 +1,14 @@
 const router = require('express').Router(),
   Bill = require('../../db/models/bill'),
   User = require('../../db/models/user'),
-  Stripe = require('stripe'),
-  stripeClient = Stripe(process.env.REACT_APP_STRIPE_SECRET_KEY);
+  stripe = require('stripe')(process.env.REACT_APP_STRIPE_SECRET_KEY);
 
 router.get('/api/bill/me', async (req, res) => res.json(req.bill));
 
-router.post('/commit-order', async (req, res) => {
+router.post('/checkout', async (req, res) => {
   const { amountDue, billDate } = req.body;
   try {
-    const { id } = await stripeClient.charges.create({
+    const { id } = await stripe.charges.create({
       amount: amountDue,
       source: token.id,
       currency: 'usd'

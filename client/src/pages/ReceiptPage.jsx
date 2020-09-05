@@ -53,7 +53,12 @@ const ReceiptPage = () => {
         {!!cartTotal && (
           <div className="checkout">
             <p>Your total is {cartTotal}</p>
-            <StripeCheckout stripeKey={stripeKey} token={handleToken} />
+            <StripeCheckout
+              stripeKey={stripeKey}
+              token={handleToken}
+              onClick={console.log(stripeKey)}
+              amount={cartTotal}
+            />
           </div>
         )}
       </div>
