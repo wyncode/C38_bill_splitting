@@ -1,6 +1,9 @@
 const router = require('express').Router(),
   Bill = require('../../db/models/bill'),
-  User = require('../../db/models/user');
+  User = require('../../db/models/user'),
+  Stripe = require('stripe'),
+  stripeClient = Stripe(process.env.REACT_APP_STRIPE_SECRET_KEY);
+
 
 router.get('/api/bill/me', async (req, res) => res.json(req.bill));
 
