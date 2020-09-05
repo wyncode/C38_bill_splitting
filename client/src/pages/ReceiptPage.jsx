@@ -6,7 +6,6 @@ import StripeCheckout from 'react-stripe-checkout';
 import { useHistory } from 'react-router-dom';
 
 const ReceiptPage = () => {
-  require('dotenv');
   const stripeKey = process.env.STRIPE_API_KEY;
   const stripe = useStripe();
   const stripeElements = useElements();
