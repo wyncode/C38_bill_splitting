@@ -57,7 +57,7 @@ const ReceiptPage = () => {
               stripeKey={stripeKey}
               token={handleToken}
               onClick={console.log(stripeKey)}
-              amount={cartTotal}
+              amount={cartTotal * 100}
             />
           </div>
         )}
