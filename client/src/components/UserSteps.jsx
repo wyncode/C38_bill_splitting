@@ -4,8 +4,9 @@ import { Carousel } from 'react-bootstrap';
 const UserSteps = () => {
   return (
     <>
-      <div className="page-header">
-        <h1 className="homepagetitles mt-4 mb-4">How Cuenta works</h1>
+
+    <div>
+      <h1 className="homepagetitles mt-4 mb-4">How Cuenta works</h1>
       </div>
       <div className="carousel slide" data-ride="carousel">
         <ul className="carousel-indicators">
