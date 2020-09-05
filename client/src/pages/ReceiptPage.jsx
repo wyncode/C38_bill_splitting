@@ -1,17 +1,12 @@
 import React, { useState } from 'react';
-import { useStripe, useElements } from '@stripe/react-stripe-js';
 import receiptData from '../context/ReceiptData';
 import Product from '../components/Stripe_info/Product';
 import StripeCheckout from 'react-stripe-checkout';
 import { useHistory } from 'react-router-dom';
 
 const ReceiptPage = () => {
-  require('dotenv');
-  const stripeKey = process.env.STRIPE_API_KEY;
-  const stripe = useStripe();
-  const stripeElements = useElements();
+  const stripeKey = process.env.REACT_APP_STRIPE_PUBLIC_KEY;
   const [cart, setCart] = useState({});
-  const [isOpen, setIsOpen] = useState(false);
   const [isInCart, setIsInCart] = useState(false);
   const history = useHistory();
 
@@ -58,10 +53,7 @@ const ReceiptPage = () => {
         {!!cartTotal && (
           <div className="checkout">
             <p>Your total is {cartTotal}</p>
-            <StripeCheckout
-              stripeKey="pk_test_51HKXE9Hw1fYcSyUMvWAesffBTJFb25i4S1RBUudZzcyFLAF0IuINcJYmUBZ8MfStJ9DKMA6oNw1zk72T56CD0d0300Oh2rIkUM"
-              token={handleToken}
-            />
+            <StripeCheckout stripeKey={stripeKey} token={handleToken} />
           </div>
         )}
       </div>
