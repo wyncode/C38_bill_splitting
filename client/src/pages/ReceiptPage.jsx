@@ -58,7 +58,6 @@ const ReceiptPage = () => {
           <div className="checkout">
             <p>Your total is {cartTotal}</p>
             <StripeCheckout
-              stripeKey="pk_test_51HKXE9Hw1fYcSyUMvWAesffBTJFb25i4S1RBUudZzcyFLAF0IuINcJYmUBZ8MfStJ9DKMA6oNw1zk72T56CD0d0300Oh2rIkUM"
               token={handleToken}
             />
           </div>
