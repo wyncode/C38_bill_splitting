@@ -32,9 +32,14 @@ const LandingPage = () => {
           </Button>
         </Link>
       </Jumbotron>
-      <UserBenefits />
-      <UserSteps />
-      <UserRewards />
+
+      <div className="page-container">
+        <div className="content-wrap">
+          <UserBenefits />
+          <UserSteps />
+          <UserRewards />
+        </div>
+      </div>
       <Footer />
     </>
   );

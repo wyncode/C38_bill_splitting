@@ -35,7 +35,7 @@
 
 .homejumbotext {
   position: absolute;
-  top: 150px;
+  top: 138px;
   width: 330px;
   font-family: 'Poppins' sans-serif;
   font-style: normal;
@@ -52,29 +52,7 @@
 
 /* UserBenefits */
 
-/* .icon::before {
-  display: inline-block;
-  font-style: normal; 
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-}
-
-Step 2: Reference Individual Icons
-.login::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "fas fa-cocktail"
-}
-
-Note: Make sure to include the correct weight and Unicode value for the icon
-.tps::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-  content: "fas fa-cocktail";
-}  */
-
-.benefittitle {
+#benefittitle {
   font-family: 'Poppins' sans-serif;
   font-style: bold;
   font-weight: 600;
@@ -93,13 +71,12 @@ Note: Make sure to include the correct weight and Unicode value for the icon
 #benefitrewards {
   flex-direction: column;
   float: left;
-  margin-top: 60px;
-  padding: 5px;
+  margin-top: 80px;
+  padding: 15px;
 }
 
 .homecircleimg {
   float: left;
-
   height: 600px;
   background-size: cover;
   padding: 5px;
@@ -124,22 +101,20 @@ Note: Make sure to include the correct weight and Unicode value for the icon
 }
 
 /* UserRewards */
-
 #rewardstext {
-  color: #41ccaa;
-  font-family: 'Poppins' sans-serif;
-  font-style: bold;
-  font-weight: 700;
-  font-size: 20px;
+  font-family: 'Poppins';
+  font-style: bold solid;
+  font-weight: 700px;
+  font-size: 27px;
+  width: 200px;
 }
 
 #rewardsbtn {
-  color: #1840d9;
-  /* position: relative; */
   text-underline-position: below;
   transition: 0.5s;
-  font-style: bold;
+  font-style: bold solid;
   font-weight: 600;
+  font-size: 20px;
 }
 
 #rewardsbtn:hover {
@@ -150,20 +125,12 @@ Note: Make sure to include the correct weight and Unicode value for the icon
 
 /* App css */
 
-.container-fluid {
-  width: 40%;
-  margin-right: 2%;
-  background: url('https://res.cloudinary.com/jeanniet89/image/upload/a_35/v1598849792/Cuenta_ribbon_dotted_circle_cropped.png');
-  height: 500px;
-  background-size: cover;
-  margin-left: -215px;
-}
-
-/* App css */
-/* .page-container {
+.page-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: 10px;
+  padding: 5px;
 }
 
 .content-wrap {
@@ -196,6 +163,7 @@ Note: Make sure to include the correct weight and Unicode value for the icon
   display: block;
 }
 
+/* Landingpage Nav & footer */
 #navbtn {
   color: #1840d9;
   position: relative;
@@ -211,12 +179,22 @@ Note: Make sure to include the correct weight and Unicode value for the icon
 }
 
 .footer {
+  display: flex;
   background-color: #1840d9;
   position: relative;
-  justify-content: center;
   bottom: 0;
   padding-top: 4rem;
   width: 100%;
+  height: 200px;
+}
+
+.fticons {
+  flex-direction: row;
+  font-family: 'Poppins' sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: black;
 }
 
 /* /* Signup css * */
@@ -263,7 +241,7 @@ p {
   background-color: #fff;
   height: 80px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   width: 50%;
 }
@@ -273,6 +251,7 @@ p {
   margin-bottom: 0.5rem;
   font-size: 2rem;
 }
+
 .menu-bars1 {
   margin-left: 7rem;
   font-size: 1.5rem;
@@ -300,7 +279,7 @@ p {
 .nav-text {
   display: flex;
   color: #ffffff;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   padding: 8px 0px 8px 16px;
   list-style: none;
@@ -332,7 +311,7 @@ p {
   width: 100%;
   height: 80px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 

@@ -42,6 +42,7 @@ const App = () => {
         </AppContextProvider>
       </div>
     </div>
+
   );
 };
 
