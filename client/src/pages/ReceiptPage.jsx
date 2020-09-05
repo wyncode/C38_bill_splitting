@@ -6,7 +6,7 @@ import StripeCheckout from 'react-stripe-checkout';
 import { useHistory } from 'react-router-dom';
 
 const ReceiptPage = () => {
-  const stripeKey = process.env.STRIPE_API_KEY;
+  const stripeKey = process.env.REACT_APP_STRIPE_PUBLIC_KEY;
   const [cart, setCart] = useState({});
   const [isOpen, setIsOpen] = useState(false);
   const [isInCart, setIsInCart] = useState(false);
@@ -55,9 +55,7 @@ const ReceiptPage = () => {
         {!!cartTotal && (
           <div className="checkout">
             <p>Your total is {cartTotal}</p>
-            <StripeCheckout
-              token={handleToken}
-            />
+            <StripeCheckout stripeKey={stripeKey} token={handleToken} />
           </div>
         )}
       </div>
