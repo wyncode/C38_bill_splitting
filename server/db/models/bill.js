@@ -7,10 +7,14 @@ const billSchema = new mongoose.Schema(
     amountDue: { type: Number, required: true },
     party: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
     billDate: { type: Date },
-    taxes: { type: Number, required: true },
-    gratuity: { type: Number, required: true },
-    paymentStatus: { type: Boolean, default: false },
-    madePayment: { type: Boolean, default: false }
+    tokenID: {
+      type: String,
+      required: true
+    },
+    transactionID: {
+      type: String,
+      required: true
+    }
   },
   { timestamps: true }
 );

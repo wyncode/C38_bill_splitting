@@ -13,22 +13,29 @@ const LandingPage = () => {
   return (
     <>
       <Navigation />
-        <Jumbotron>
-            <h1 className="homejumbotitle">Splitting a bill has never been easier.</h1>
-            <p className="homejumbotext">
-              Scan the QR Code on your receipt, select your ordered items and
-              pay!
-            </p>
-                <Link to="/billpage">
-                  <Button className="jumbobtn" id="button" variant="primary" size="lg" block>
-                    Split your bill
-                  </Button>
-                </Link>
-        </Jumbotron>
-        <UserBenefits />
-        <UserSteps />
-        <UserRewards />
-        <Footer />
+      <Jumbotron>
+        <h1 className="homejumbotitle">
+          Splitting a bill has never been easier.
+        </h1>
+        <p className="homejumbotext">
+          Scan the QR Code on your receipt, select your ordered items and pay!
+        </p>
+        <Link to="/billpage">
+          <Button
+            className="jumbobtn"
+            id="button"
+            variant="primary"
+            size="lg"
+            block
+          >
+            Split your bill
+          </Button>
+        </Link>
+      </Jumbotron>
+      <UserBenefits />
+      <UserSteps />
+      <UserRewards />
+      <Footer />
     </>
   );
 };

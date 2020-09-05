@@ -4,25 +4,21 @@ const router = require('express').Router(),
 
 router.get('/api/bill/me', async (req, res) => res.json(req.bill));
 
-router.post('/api/bill/me', async (req, res) => {
-  const {
-    amountDue,
-    party,
-    billDate,
-    taxes,
-    gratuity,
-    paymentStatus,
-    madePayment
-  } = req.body;
+router.post('/commit-order', async (req, res) => {
+  const { amountDue, billDate } = req.body;
   try {
+    const { id } = await stripeClient.charges.create({
+      amount: amountDue,
+      source: token.id,
+      currency: 'usd'
+    });
+
     const bill = new Bill({
       amountDue,
       party: req.user.id,
       billDate,
-      taxes,
-      gratuity,
-      paymentStatus,
-      madePayment
+      tokenID: token.id,
+      transactionID: id
     });
     await bill.save();
     const newBill = new Bill(req.body);

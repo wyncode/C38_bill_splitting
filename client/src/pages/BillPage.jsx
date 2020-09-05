@@ -1,20 +1,19 @@
 import React from 'react';
 import QrReader from 'react-qr-reader';
 import HomeNav from '../components/HomeNav';
+import { useHistory } from 'react-router-dom';
 
 const BillPage = () => {
-  function handleScan(event) {
-    console.log('Event: ', event);
-    if (event !== null) {
-      // API call using event. If call is true then update context/save onto session storage
-      //    and push me to next page
+  const history = useHistory();
 
-      console.log('I am no longer null');
+  function handleScan(event) {
+    if (event !== null) {
+      history.push('/receipt');
     }
   }
 
   return (
-    <div>
+    <div className="box">
       <HomeNav />
 
       <h1>QR Code</h1>
