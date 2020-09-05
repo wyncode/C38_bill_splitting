@@ -319,4 +319,6 @@ span {
   margin-left: 16px;
 }
 
-/* Bill Page */
+.modal-backdrop {
+  background-color: white !important;
+}

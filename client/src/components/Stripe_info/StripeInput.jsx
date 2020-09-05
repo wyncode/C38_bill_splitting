@@ -1,15 +1,15 @@
 import React from 'react';
 import { CardElement } from '@stripe/react-stripe-js';
 
-const CARD_ELEMENT_OPTIONS = {
+const CARD_OPTIONS = {
   style: {
     base: {
-      color: 'white',
+      color: 'black',
       fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
       fontSmoothing: 'antialiased',
       fontSize: '16px',
       '::placeholder': {
-        color: '#aab7c4'
+        color: 'black'
       }
     },
     invalid: {
@@ -19,6 +19,6 @@ const CARD_ELEMENT_OPTIONS = {
   }
 };
 
-const StripeInput = (_) => <CardElement options={CARD_ELEMENT_OPTIONS} />;
+const StripeInput = (_) => <CardElement options={CARD_OPTIONS} />;
 
 export default StripeInput;
