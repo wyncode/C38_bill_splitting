@@ -11,12 +11,14 @@ import { Elements } from '@stripe/react-stripe-js';
 import Profile from './pages/Profile';
 import About from './pages/About';
 import BillPage from './pages/BillPage';
+import { ToastContainer } from 'react-toastify';
 
 import './App.css';
 import { loadStripe } from '@stripe/stripe-js';
 
+const stripePromise = loadStripe(REACT_APP_STRIPE_PUBLIC_KEY);
+
 const App = () => {
-  const stripePromise = loadStripe(process.env.STRIPE_API_KEY);
   return (
     <div className="container-fluid">
       <div className="content-wrap">
@@ -29,11 +31,12 @@ const App = () => {
               <Route exact path="/about" component={About} />
               <PrivateRoute exact path="/home" component={Home} />
               {/* <PrivateRoute exact path="/profile" component={Profile} /> */}
-              <Elements stripe={stripePromise}>
-                <Route path="/receipt" component={ReceiptPage} />
-              </Elements>
               <PrivateRoute exact path="/profile" component={Profile} />
               <PrivateRoute exact path="/billpage" component={BillPage} />
+              <Elements stripe={stripePromise}>
+                <Route path="/receipt" component={ReceiptPage} />
+                <ToastContainer />
+              </Elements>
             </Switch>
           </BrowserRouter>
         </AppContextProvider>

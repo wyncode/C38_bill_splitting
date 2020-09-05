@@ -12,7 +12,7 @@ const sendWelcomeEmail = (email, name) => {
     color: grey;
   }
   </style>
-  <h1 class='title' >Welcome to Cuenta</h1>
+  <h1 className='title' >Welcome to Cuenta</h1>
   <div>Thank you ${name} for signing up for cuenta services</div>
 
   `;

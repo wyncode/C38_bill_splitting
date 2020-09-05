@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
-import { toast } from 'react-toastify';
 import receiptData from '../context/ReceiptData';
 import Product from '../components/Stripe_info/Product';
-import CartItems from '../components/Stripe_info/CartItems';
-import CheckoutModal from '../components/Stripe_info/CheckoutModal';
+import StripeCheckout from 'react-stripe-checkout';
+import { useHistory } from 'react-router-dom';
 
 const ReceiptPage = () => {
-  const stripe = useStripe();
-  const stripeElements = useElements();
+  const stripeKey = process.env.REACT_APP_STRIPE_PUBLIC_KEY;
   const [cart, setCart] = useState({});
-  const [isOpen, setIsOpen] = useState(false);
   const [isInCart, setIsInCart] = useState(false);
+  const history = useHistory();
 
   const cartTotal = Object.values(cart).reduce(
     (acc, { price }) => acc + price,
@@ -35,30 +31,9 @@ const ReceiptPage = () => {
     setIsInCart(false);
   };
 
-  const handleStartCheckout = () => {
-    setIsOpen(true);
-  };
-
-  const handleCancelCheckout = () => {
-    setIsOpen(false);
-  };
-
-  const handleCommitOrder = async (e) => {
-    e.preventDefault();
-
-    const cardInputEl = stripeElements.getElement(CardElement);
-    const { token } = await stripe.createToken(cardInputEl);
-
-    const { data } = await axios.post('/commit-order', {
-      token,
-      cartTotal,
-      cart
-    });
-
-    data.success ? toast.success(data.message) : toast.error(data.message);
-    setCart({});
-    setIsOpen(false);
-  };
+  function handleToken() {
+    history.push('/home');
+  }
   return (
     <>
       <div className="receipt-tab">
@@ -75,21 +50,18 @@ const ReceiptPage = () => {
       </div>
       <div className="cart">
         <h3>Your Tab</h3>
-        {/* {Object.values(cart).map((cartItem) => (
-          <CartItems key={cartItem.id} {...cartItem} />
-        ))} */}
         {!!cartTotal && (
           <div className="checkout">
             <p>Your total is {cartTotal}</p>
-            <button onClick={handleStartCheckout}>Pay bill</button>
+            <StripeCheckout
+              stripeKey={stripeKey}
+              token={handleToken}
+              onClick={console.log(stripeKey)}
+              amount={cartTotal}
+            />
           </div>
         )}
       </div>
-      <CheckoutModal
-        handleCommitOrder={handleCommitOrder}
-        handleCancelCheckout={handleCancelCheckout}
-        isOpen={isOpen}
-      />
     </>
   );
 };

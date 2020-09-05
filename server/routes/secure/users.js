@@ -3,6 +3,8 @@ const { welcomeText } = require('../../db/twilio/send_sms'),
   cloudinary = require('cloudinary').v2,
   isAdmin = require('../../db/middleware/authorization/authorization');
 
+router.get('/api/users/me', async (req, res) => res.json(req.user));
+
 router.get('/api/admin', isAdmin(), async (req, res) => {
   try {
     res.json({ message: 'admin user' });
