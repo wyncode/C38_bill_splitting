@@ -17,7 +17,6 @@ import './App.css';
 import { loadStripe } from '@stripe/stripe-js';
 
 const App = () => {
-  require('dotenv');
 
   const stripePromise = loadStripe(process.env.STRIPE_API_KEY);
   return (
