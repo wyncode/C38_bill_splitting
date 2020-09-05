@@ -7,8 +7,6 @@ import { useHistory } from 'react-router-dom';
 
 const ReceiptPage = () => {
   const stripeKey = process.env.STRIPE_API_KEY;
-  const stripe = useStripe();
-  const stripeElements = useElements();
   const [cart, setCart] = useState({});
   const [isOpen, setIsOpen] = useState(false);
   const [isInCart, setIsInCart] = useState(false);
