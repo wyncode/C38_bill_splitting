@@ -2,7 +2,7 @@ import React from 'react';
 import QrReader from 'react-qr-reader';
 import { useHistory } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import { Container, Form} from 'react-bootstrap';
+import { Container, Form } from 'react-bootstrap';
 
 const BillPage = () => {
   const history = useHistory();
@@ -12,11 +12,12 @@ const BillPage = () => {
       history.push('/receipt');
     }
   }
-// listening to the onsubmit event and then 
-  function handleSubmit(event){
+  // listening to the onsubmit event and then
+  function handleSubmit(event) {
+    console.log('i am here');
     event.preventdefault();
     history.push('/receipt');
-   };
+  }
 
   return (
     <>
@@ -28,17 +29,17 @@ const BillPage = () => {
         <h6 className="ml-2 mr-4 mb-4 mt-2">
           Please enter or scan your receipt code below to proceed to your bill.
         </h6>
-        <Form style={{ width: 300 }} onSubmit={e => handleSubmit(e)}>
-          <Form.Group onSubmit={e => handleSubmit(e)}>
+        <Form style={{ width: 300 }} onSubmit={handleSubmit}>
+          <Form.Group>
             <h4> Receipt code </h4>
             <Form.Control
-              onSubmit={(e) => handleSubmit(e)}
               id="/"
               type="text"
               placeholder="abc123"
               name="QR code"
             />
           </Form.Group>
+          <button type="submit">Submit</button>
           <h4> Scan code </h4>
           <QrReader
             className="justify-content-center"
