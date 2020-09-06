@@ -31,9 +31,13 @@ const About = () => {
               <Card.Body className="cardbody">
                 <Card.Title className="about">Francesca Marquez</Card.Title>
                 <Card.Text>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                  Francesca Marquez comes from a Marketing background with
+                  experience in digital marketing, graphic design, and project
+                  management. Her prior experience prepared her to wear many
+                  hats and work in a cross functional team. She like to
+                  challenge herself with difficult tasks and new experiences
+                  while working with others to accomplish the goal. Her joy
+                  comes from a sense of a job well done.
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
@@ -42,7 +46,6 @@ const About = () => {
                   target="_blank"
                 >
                   <Image
-                    className=""
                     src="https://res.cloudinary.com/jeanniet89/image/upload/v1599235038/linkedin-vector-grey-4-38wm7d7w11ejnvjj4tyygw_eihgy5.png"
                     width="30px"
                     rounded
@@ -50,7 +53,6 @@ const About = () => {
                 </Card.Link>
                 <Card.Link href="https://github.com/cescamar" target="_blank">
                   <Image
-                    className=""
                     src="https://res.cloudinary.com/jeanniet89/image/upload/v1599235049/GitHub-Mark-64px_fncsh6.png"
                     width="25px"
                     rounded
@@ -60,7 +62,7 @@ const About = () => {
             </Card>
             <Card
               className="mt-5 mb-2"
-              border="success"
+              border="primary"
               style={{ width: '18rem' }}
             >
               <Card.Img
@@ -70,23 +72,28 @@ const About = () => {
               <Card.Body>
                 <Card.Title className="about">Jeannie Torres</Card.Title>
                 <Card.Text>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                  Jeannie is well versed in the Business world in the areas of
+                  Management and Sales. Her extensive knowledge and experience
+                  has prepared her with the ability to communicate with folks of
+                  all backgrounds effectively, tackle any problems that may
+                  present her way, as well as, the ability to challenge and
+                  manage other by setting the bar high while lifting and
+                  motivating those around her.
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <Card.Link href="linkedin" target="_blank">
+                <Card.Link
+                  href="https://www.linkedin.com/in/jeannie-torres-6628bb96/"
+                  target="_blank"
+                >
                   <Image
-                    className=""
                     src="https://res.cloudinary.com/jeanniet89/image/upload/v1599235038/linkedin-vector-grey-4-38wm7d7w11ejnvjj4tyygw_eihgy5.png"
                     width="30px"
                     rounded
                   />
                 </Card.Link>
-                <Card.Link href="github" target="_blank">
+                <Card.Link href="https://github.com/Jeanniet89" target="_blank">
                   <Image
-                    className=""
                     src="https://res.cloudinary.com/jeanniet89/image/upload/v1599235049/GitHub-Mark-64px_fncsh6.png"
                     width="25px"
                     rounded
@@ -96,7 +103,7 @@ const About = () => {
             </Card>
             <Card
               className="mt-5 mb-2"
-              border="danger"
+              border="primary"
               style={{ width: '18rem' }}
             >
               <Card.Img
@@ -106,23 +113,24 @@ const About = () => {
               <Card.Body>
                 <Card.Title className="about">Sylvia Robles</Card.Title>
                 <Card.Text>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                  Sylvia is a UXUI designer with a background in graphic design
+                  and presentation design. She loves her dog Gizmo, Kpop and
+                  pizza.
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <Card.Link href="linkedin" target="_blank">
+                <Card.Link
+                  href="https://www.linkedin.com/in/sylvia-robles-00112a18a/"
+                  target="_blank"
+                >
                   <Image
-                    className=""
                     src="https://res.cloudinary.com/jeanniet89/image/upload/v1599235038/linkedin-vector-grey-4-38wm7d7w11ejnvjj4tyygw_eihgy5.png"
                     width="30px"
                     rounded
                   />
                 </Card.Link>
-                <Card.Link href="github" target="_blank">
+                <Card.Link href="http://sylviarobles.com/" target="_blank">
                   <Image
-                    className=""
                     src="https://res.cloudinary.com/jeanniet89/image/upload/v1599235049/GitHub-Mark-64px_fncsh6.png"
                     width="25px"
                     rounded
@@ -134,7 +142,11 @@ const About = () => {
         </Row>
         <Row>
           <CardDeck>
-            <Card className="mt-5" border="primary" style={{ width: '18rem' }}>
+            <Card
+              className="mt-5 mb-5"
+              border="primary"
+              style={{ width: '18rem' }}
+            >
               <Card.Img variant="top" src="holder.js/100px160" />
               <Card.Body>
                 <Card.Title className="about">Kevin Hermanni</Card.Title>
@@ -147,7 +159,6 @@ const About = () => {
               <Card.Footer>
                 <Card.Link href="linkedin" target="_blank">
                   <Image
-                    className=""
                     src="https://res.cloudinary.com/jeanniet89/image/upload/v1599235038/linkedin-vector-grey-4-38wm7d7w11ejnvjj4tyygw_eihgy5.png"
                     width="30px"
                     rounded
@@ -155,7 +166,6 @@ const About = () => {
                 </Card.Link>
                 <Card.Link href="github" target="_blank">
                   <Image
-                    className=""
                     src="https://res.cloudinary.com/jeanniet89/image/upload/v1599235049/GitHub-Mark-64px_fncsh6.png"
                     width="25px"
                     rounded
@@ -163,7 +173,11 @@ const About = () => {
                 </Card.Link>
               </Card.Footer>
             </Card>
-            <Card className="mt-5" border="success" style={{ width: '18rem' }}>
+            <Card
+              className="mt-5 mb-5"
+              border="primary"
+              style={{ width: '18rem' }}
+            >
               <Card.Img
                 variant="top"
                 src="https://res.cloudinary.com/jeanniet89/image/upload/v1599244974/Screen_Shot_2020-09-04_at_2.37.44_PM_voudxc.png"
@@ -183,7 +197,6 @@ const About = () => {
                   target="_blank"
                 >
                   <Image
-                    className=""
                     src="https://res.cloudinary.com/jeanniet89/image/upload/v1599235038/linkedin-vector-grey-4-38wm7d7w11ejnvjj4tyygw_eihgy5.png"
                     width="30px"
                     rounded
@@ -191,7 +204,6 @@ const About = () => {
                 </Card.Link>
                 <Card.Link href="https://github.com/iamsam14" target="_blank">
                   <Image
-                    className=""
                     src="https://res.cloudinary.com/jeanniet89/image/upload/v1599235049/GitHub-Mark-64px_fncsh6.png"
                     width="25px"
                     rounded
@@ -199,7 +211,11 @@ const About = () => {
                 </Card.Link>
               </Card.Footer>
             </Card>
-            <Card className="mt-5" border="danger" style={{ width: '18rem' }}>
+            <Card
+              className="mt-5 mb-5"
+              border="primary"
+              style={{ width: '18rem' }}
+            >
               <Card.Img
                 variant="top"
                 src="https://res.cloudinary.com/jeanniet89/image/upload/v1599245681/Screen_Shot_2020-09-04_at_2.50.37_PM_fx6r3p.png"
@@ -213,9 +229,11 @@ const About = () => {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <Card.Link href="linkedin" target="_blank">
+                <Card.Link
+                  href="https://www.linkedin.com/in/chefrudyromero/"
+                  target="_blank"
+                >
                   <Image
-                    className=""
                     src="https://res.cloudinary.com/jeanniet89/image/upload/v1599235038/linkedin-vector-grey-4-38wm7d7w11ejnvjj4tyygw_eihgy5.png"
                     width="30px"
                     rounded
@@ -223,7 +241,6 @@ const About = () => {
                 </Card.Link>
                 <Card.Link href="https://github.com/Rrudy0513" target="_blank">
                   <Image
-                    className=""
                     src="https://res.cloudinary.com/jeanniet89/image/upload/v1599235049/GitHub-Mark-64px_fncsh6.png"
                     width="25px"
                     rounded

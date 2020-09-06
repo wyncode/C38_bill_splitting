@@ -31,7 +31,7 @@ const Login = ({ history }) => {
       <Navigation />
       <Container className="logincontainer d-flex flex-column align-items-center justify-content-center fullscreen">
         <h2 className="title text-left">Welcome back!</h2>
-        <p className="ml-2 mr-4 mb-4 mt-1">
+        <p className=" ml-2 mr-4 mb-4 mt-1">
           Make sure to checkout your daily rewards and discounts in your
           dashboard
         </p>

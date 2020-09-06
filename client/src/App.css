@@ -143,7 +143,7 @@ p {
 /* About Page css  */
 
 .about {
-  color: #41ccaa;
+  color: #000000;
   text-align: center;
 }
 
@@ -172,6 +172,9 @@ p {
   background-position: 25px -20px !important;
 }
 
+.paragraph {
+  margin-left: 10px;
+}
 /* SignUp Page css  */
 
 .signupcontainer {
