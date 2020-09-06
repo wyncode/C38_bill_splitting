@@ -13,7 +13,7 @@ const BillPage = () => {
     }
   }
 // listening to the onsubmit event and then 
-  const handleSubmit = (event) => {
+  function handleSubmit(event){
     event.preventdefault();
     history.push('/receipt');
    };
@@ -28,11 +28,11 @@ const BillPage = () => {
         <h6 className="ml-2 mr-4 mb-4 mt-2">
           Please enter or scan your receipt code below to proceed to your bill.
         </h6>
-        <Form style={{ width: 300 }}>
-          <Form.Group>
+        <Form style={{ width: 300 }} onSubmit={e => handleSubmit(e)}>
+          <Form.Group onSubmit={e => handleSubmit(e)}>
             <h4> Receipt code </h4>
             <Form.Control
-              onSubmit={() => handleSubmit()}
+              onSubmit={(e) => handleSubmit(e)}
               id="/"
               type="text"
               placeholder="abc123"
@@ -47,12 +47,11 @@ const BillPage = () => {
           />
         </Form>
       </Container>
-      <div>
+      <div id="billpg-imgContainer">
         <img
           className="billpg"
           src="https://res.cloudinary.com/jeanniet89/image/upload/v1599115917/Cuenta%20App/Cuenta_ribbon_dotted_circle_copy_krxqfe.png"
           alt="cuenta circle"
-          // style={{ width: '300px', height: '100px'}}
         />
       </div>
     </>

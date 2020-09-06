@@ -26,7 +26,7 @@ const UserSteps = () => {
           />
             <h2 className="hometext">Scan</h2>
             <h3 className="homepagetext">the QR code in your receipt</h3>
-          {/* </Carousel.Caption> */}
+        
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -39,7 +39,7 @@ const UserSteps = () => {
           />
             <h2 className="hometext">Select</h2>
             <h3 className="homepagetext">the items you ordered</h3>
-          {/* </Carousel.Caption> */}
+     
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -50,10 +50,10 @@ const UserSteps = () => {
             alt="Scanner Img"
             height="350vh"
           />
-          {/* <Carousel.Caption> */}
+  
             <h2 className="hometext">Choose</h2>
             <h3 className="homepagetext">your payment method</h3>
-          {/* </Carousel.Caption> */}
+       
         </Carousel.Item>
       </Carousel>
     </>
