@@ -5,8 +5,11 @@ const router = require('express').Router(),
 
 router.get('/api/bill/me', async (req, res) => res.json(req.bill));
 
-router.post('/checkout', async (req, res) => {
-  const { amountDue, billDate } = req.body;
+router.post('/api/bill/checkout', async (req, res) => {
+  const { amountDue, token } = req.body;
+
+  const billDate = new Date().toISOString();
+
   try {
     const { id } = await stripe.charges.create({
       amount: amountDue,
@@ -21,16 +24,15 @@ router.post('/checkout', async (req, res) => {
       tokenID: token.id,
       transactionID: id
     });
-    await bill.save();
-    const newBill = new Bill(req.body);
-    newBill.party = req.params._id;
 
-    let user = await User.findById(req.user._id);
-    let createdBill = await newBill.save();
-    await console.log(user.billHistory);
-    await user.billHistory.push(createdBill._id);
-    await console.log(createdBill.id);
+    await bill.save();
+
+    const user = await User.findById(req.user._id);
+
+    user.billHistory.push(createdBill._id);
+
     await user.save();
+
     res.status(201).json(bill);
   } catch (error) {
     res.status(400).json({ error: error.toString() });

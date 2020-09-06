@@ -1,7 +1,9 @@
 const router = require('express').Router(),
   jwt = require('jsonwebtoken'),
-  { sendWelcomeEmail, forgotPasswordEmail } = require('../../db/emails/emails');
-User = require('../../db/models/user');
+  { sendWelcomeEmail, forgotPasswordEmail } = require('../../db/emails/emails'),
+  User = require('../../db/models/user'),
+  Bill = require('../../db/models/bill'),
+  stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 router.post('/api/users/', async (req, res) => {
   const { name, email, password } = req.body;
@@ -80,6 +82,33 @@ router.get('/api/password/:token', (req, res) => {
     res.redirect(process.env.URL + '/update-password');
   } catch (error) {
     res.status(401).json({ error: error.toString() });
+  }
+});
+
+router.post('/api/guest-checkout', async (req, res) => {
+  const { amountDue, token } = req.body;
+
+  const billDate = new Date().toISOString();
+
+  try {
+    const { id } = await stripe.charges.create({
+      amount: amountDue,
+      source: token.id,
+      currency: 'usd'
+    });
+
+    const bill = new Bill({
+      amountDue,
+      billDate,
+      tokenID: token.id,
+      transactionID: id
+    });
+
+    await bill.save();
+
+    res.status(201).json(bill);
+  } catch (error) {
+    res.status(400).json({ error: error.toString() });
   }
 });
 
