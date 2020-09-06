@@ -4,6 +4,8 @@ const { welcomeText } = require('../../db/twilio/send_sms'),
   isAdmin = require('../../db/middleware/authorization/authorization'),
   sendCancellationEmail = require('../../db/emails/emails');
 
+router.get('/api/users/me', async (req, res) => res.json(req.user));
+
 router.get('/api/admin', isAdmin(), async (req, res) => {
   try {
     res.json({ message: 'admin user' });

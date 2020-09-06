@@ -1,67 +1,136 @@
-/* @media (min-withd:576px, 768px, 992px, 1200px); */
-/* .fullscreen {
-  height: 100vh; */
-/* } */
+.fullscreen {
+  height: 100vh;
+}
 
 .badge-xl {
   font-size: 18px;
 }
 
-/* Homepage css *
+/* Homepage/Landingpage css */
 
-/* .jumbobtn {
-position: absolute;
-margin-bottom: 0;
-margin-top: 0;
-} */
+.jumbobtn {
+  position: absolute;
+  height: 44px;
+  top: 530px;
+}
 
 .jumbotron {
-  background: url('https://res.cloudinary.com/jeanniet89/image/upload/c_limit,w_1646/v1598822801/Cuenta%20App/Hero_graphic_q2l7e7.png')
-    top center;
-  height: 500px;
+  background: url('https://res.cloudinary.com/jeanniet89/image/upload/c_limit,w_1646/v1598822801/Cuenta%20App/Hero_graphic_q2l7e7.png');
+  height: 650px;
   background-size: cover;
   background-position: center;
-  border-radius: 0px !important;
+  position: relative;
 }
 
-h1 {
-  margin-left: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 35px !important;
-  font-weight: bold !important;
+.homejumbotitle {
+  position: absolute;
+  top: 60px;
+  color: #1840d9;
+  width: 338px;
+  font-family: 'Poppins' sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
 }
 
-p {
-  margin: 10px;
-  text-align: left;
-  font-family: Arial, Helvetica, sans-serif;
+.homejumbotext {
+  position: absolute;
+  top: 138px;
+  width: 330px;
+  font-family: 'Poppins' sans-serif;
+  font-style: normal;
   font-size: 18px;
+  color: #2e2e2e;
 }
 
-.hometext {
+.homepagetitles {
+  font-family: 'Poppins' sans-serif;
+  font-style: bold;
+  font-weight: 600;
+  color: #2e2e2e;
+}
+
+/* UserBenefits */
+
+#benefittitle {
+  font-family: 'Poppins' sans-serif;
+  font-style: bold;
+  font-weight: 600;
+  font-size: 27px;
   color: #1840d9;
 }
 
-.usertext {
-  color: #1840d9;
-  text-align: center;
+.benefittext {
+  font-family: 'Poppins' sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #353535;
+}
+
+#benefitrewards {
+  flex-direction: column;
+  float: left;
+  margin-top: 80px;
+  padding: 15px;
 }
 
 .homecircleimg {
   float: left;
-  width: 40%;
-  margin-right: 2%;
-  background: url('https://res.cloudinary.com/jeanniet89/image/upload/a_35/v1598849792/Cuenta_ribbon_dotted_circle_cropped.png');
-  height: 500px;
+  height: 600px;
   background-size: cover;
-  margin-left: -215px;
+  padding: 5px;
+}
+
+/* UserSteps */
+
+.homepagetext {
+  font-family: 'Poppins' sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #353535;
+}
+
+.hometext {
+  font-family: 'Poppins' sans-serif;
+  font-style: bold;
+  font-weight: 600;
+  font-size: 27px;
+  color: #1840d9;
+}
+
+/* UserRewards */
+#rewardstext {
+  font-family: 'Poppins';
+  font-style: bold solid;
+  font-weight: 700px;
+  font-size: 27px;
+  width: 200px;
+}
+
+#rewardsbtn {
+  text-underline-position: below;
+  transition: 0.5s;
+  font-style: bold solid;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#rewardsbtn:hover {
+  background: #41ccaa !important;
+  color: #050801 !important;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005) !important;
 }
 
 /* App css */
-/* .page-container {
+
+.page-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: 10px;
+  padding: 5px;
 }
 
 .content-wrap {
@@ -69,7 +138,6 @@ p {
 }
 
 /* button hover style */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 #button {
   color: #ffffff;
@@ -95,6 +163,7 @@ p {
   display: block;
 }
 
+/* Landingpage Nav & footer */
 #navbtn {
   color: #1840d9;
   position: relative;
@@ -110,12 +179,22 @@ p {
 }
 
 .footer {
+  display: flex;
   background-color: #1840d9;
   position: relative;
-  justify-content: center;
   bottom: 0;
   padding-top: 4rem;
   width: 100%;
+  height: 200px;
+}
+
+.fticons {
+  flex-direction: row;
+  font-family: 'Poppins' sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: black;
 }
 
 /* /* Signup css * */
@@ -190,7 +269,7 @@ p {
   background-color: #fff;
   height: 80px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   width: 50%;
 }
@@ -200,6 +279,7 @@ p {
   margin-bottom: 0.5rem;
   font-size: 2rem;
 }
+
 .menu-bars1 {
   margin-left: 7rem;
   font-size: 1.5rem;
@@ -228,7 +308,7 @@ p {
 .nav-text {
   display: flex;
   color: #ffffff;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   padding: 8px 0px 8px 16px;
   list-style: none;
@@ -260,10 +340,14 @@ p {
   width: 100%;
   height: 80px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 
 span {
   margin-left: 16px;
+}
+
+.modal-backdrop {
+  background-color: white !important;
 }
