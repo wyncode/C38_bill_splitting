@@ -147,7 +147,10 @@ const About = () => {
               border="primary"
               style={{ width: '18rem' }}
             >
-              <Card.Img variant="top" src="holder.js/100px160" />
+              <Card.Img
+                variant="top"
+                src="https://res.cloudinary.com/jeanniet89/image/upload/v1599423561/Kevin_Hermanni_Wyncode_yrff1q.png"
+              />
               <Card.Body>
                 <Card.Title className="about">Kevin Hermanni</Card.Title>
                 <Card.Text>
@@ -157,14 +160,20 @@ const About = () => {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <Card.Link href="linkedin" target="_blank">
+                <Card.Link
+                  href="https://www.linkedin.com/in/kevin-hermanni/"
+                  target="_blank"
+                >
                   <Image
                     src="https://res.cloudinary.com/jeanniet89/image/upload/v1599235038/linkedin-vector-grey-4-38wm7d7w11ejnvjj4tyygw_eihgy5.png"
                     width="30px"
                     rounded
                   />
                 </Card.Link>
-                <Card.Link href="github" target="_blank">
+                <Card.Link
+                  href="https://maroon-icosahedron-93hg.squarespace.com/config/pages/5f11c996ff0da30cc8d5a901"
+                  target="_blank"
+                >
                   <Image
                     src="https://res.cloudinary.com/jeanniet89/image/upload/v1599235049/GitHub-Mark-64px_fncsh6.png"
                     width="25px"
