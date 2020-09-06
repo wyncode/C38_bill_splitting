@@ -4,6 +4,7 @@ import { Navbar } from 'react-bootstrap';
 const Footer = () => {
   return (
     <div>
+      
       <Navbar className="footer mt-4">
         <Navbar.Brand href="/about" target="_blank" rel="noopener noreferrer">
           About us

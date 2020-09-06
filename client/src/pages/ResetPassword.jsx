@@ -12,7 +12,7 @@ const ResetPassword = () => {
     axios
       .get(`/api/password?email=${email}`)
       .then((res) => {
-        // console.log(res);
+        console.log(res);
         form.reset();
       })
       .catch((error) => console.log(error));
