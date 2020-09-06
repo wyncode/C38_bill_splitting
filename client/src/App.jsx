@@ -11,6 +11,8 @@ import { Elements } from '@stripe/react-stripe-js';
 import Profile from './pages/Profile';
 import About from './pages/About';
 import BillPage from './pages/BillPage';
+import ResetPassword from './pages/ResetPassword';
+import UpdatePassword from './pages/UpdatePassword';
 import { ToastContainer } from 'react-toastify';
 import './App.css';
 import { loadStripe } from '@stripe/stripe-js';
@@ -28,6 +30,8 @@ const App = () => {
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/about" component={About} />
+              <Route exact path="/reset-password" component={ResetPassword} />
+              <Route exact path="/update-password" component={UpdatePassword} />
               <PrivateRoute exact path="/home" component={Home} />
               {/* <PrivateRoute exact path="/profile" component={Profile} /> */}
               <PrivateRoute exact path="/profile" component={Profile} />

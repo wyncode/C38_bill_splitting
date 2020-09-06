@@ -7,6 +7,7 @@ import HomeNav from '../components/HomeNav';
 import Navigation from '../components/Navigation';
   
 const ReceiptPage = () => {
+  require('dotenv').config();
   const stripeKey = process.env.REACT_APP_STRIPE_PUBLIC_KEY;
   const [cart, setCart] = useState({});
   const [isInCart, setIsInCart] = useState(false);
@@ -79,8 +80,7 @@ const ReceiptPage = () => {
             <StripeCheckout
               stripeKey={stripeKey}
               token={handleToken}
-              onClick={console.log(stripeKey)}
-              amount={cartTotal}
+              amount={cartTotal * 100}
             />
           </div>
         )}

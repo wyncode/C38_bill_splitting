@@ -1,7 +1,8 @@
 const { welcomeText } = require('../../db/twilio/send_sms'),
   router = require('express').Router(),
   cloudinary = require('cloudinary').v2,
-  isAdmin = require('../../db/middleware/authorization/authorization');
+  isAdmin = require('../../db/middleware/authorization/authorization'),
+  sendCancellationEmail = require('../../db/emails/emails');
 
 router.get('/api/users/me', async (req, res) => res.json(req.user));
 
@@ -70,10 +71,10 @@ router.put('/api/password', async (req, res) => {
 router.delete('/api/users/me', async (req, res) => {
   try {
     await req.user.remove();
-    sendCancellationEmail(req.user.email, req.user.name);
+    //sendCancellationEmail(req.user.email, req.user.name);
     res.clearCookie('jwt');
     res.json({ message: 'user deleted' });
-  } catch (error) {
+  } catch (e) {
     res.status(500).json({ error: e.toString() });
   }
 });

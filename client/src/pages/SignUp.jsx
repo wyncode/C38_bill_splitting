@@ -30,7 +30,7 @@ const SignUpPage = ({ history }) => {
     <>
       <Navigation />
 
-      <Container className=" container1 container d-flex flex-column align-items-center justify-content-center fullscreen">
+      <Container className="signupcontainer container d-flex flex-column align-items-center justify-content-center fullscreen">
         <h2 className="title mb-2 text-left">Welcome to Cuenta!</h2>
         <h6 className="mb-4 text-left">
           As a Cuenta rewards member you'll earn exclusive discounts, offers,
