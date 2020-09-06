@@ -14,8 +14,6 @@ import BillPage from './pages/BillPage';
 import ResetPassword from './pages/ResetPassword';
 import UpdatePassword from './pages/UpdatePassword';
 import { ToastContainer } from 'react-toastify';
-
-
 import './App.css';
 import { loadStripe } from '@stripe/stripe-js';
 

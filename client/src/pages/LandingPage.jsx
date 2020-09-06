@@ -20,7 +20,11 @@ const LandingPage = () => {
         <p className="homejumbotext">
           Scan the QR Code on your receipt, select your ordered items and pay!
         </p>
-        <Link to="/billpage">
+        <Link
+          to="/billpage"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button
             className="jumbobtn"
             id="button"

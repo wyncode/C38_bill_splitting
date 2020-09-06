@@ -100,7 +100,21 @@
   color: #1840d9;
 }
 
+.carousel {
+  /* background-color: white; */
+  /* background-image: url('https://res.cloudinary.com/jeanniet89/image/upload/q_100/v1599423593/Cuenta%20App/Splitbill_frksso.jpg'); */
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-shadow: turquoise;
+}
+
+.carousel-inner img {
+  margin: auto;
+}
 /* UserRewards */
+
 #rewardstext {
   font-family: 'Poppins';
   font-style: bold solid;
@@ -121,6 +135,30 @@
   background: #41ccaa !important;
   color: #050801 !important;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005) !important;
+}
+
+.wobble:focus,
+.wobble:hover {
+  animation: wobble 1s 1;
+}
+
+/* .wobble:focus, .wobble:hover [wobble='1'] {
+    animation: wobble infinite 3s 1;
+} */
+
+@keyframes wobble {
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /* App css */
@@ -164,6 +202,7 @@
 }
 
 /* Landingpage Nav & footer */
+
 #navbtn {
   color: #1840d9;
   position: relative;
@@ -267,11 +306,7 @@
 
 .homenav {
   background-color: #fff;
-  height: 80px;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 50%;
 }
 
 .menu-bars {
@@ -350,4 +385,34 @@ span {
 
 .modal-backdrop {
   background-color: white !important;
+}
+
+/* Billpage */
+
+.billpg {
+  animation-direction: unset;
+  animation: rotate;
+  transform: rotate(-30deg);
+  overflow: hidden;
+  border-bottom-right-radius: 500px;
+  border-bottom-left-radius: 100px;
+}
+
+.billpg img {
+  width: 100%;
+}
+
+@keyframes billpg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.receiptimg {
+  align-items: space-around;
+  margin: 0;
 }
