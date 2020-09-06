@@ -185,9 +185,9 @@ const About = () => {
               <Card.Body>
                 <Card.Title className="about">Samuel Robles</Card.Title>
                 <Card.Text>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                  Samuel has experience working in a fast-paced environment, is
+                  a great communicator and is exceptional at working in a team
+                  setting due to his background in the restaurant industry
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
