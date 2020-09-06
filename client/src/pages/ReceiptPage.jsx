@@ -5,6 +5,7 @@ import StripeCheckout from 'react-stripe-checkout';
 import { useHistory } from 'react-router-dom';
 
 const ReceiptPage = () => {
+  require('dotenv').config();
   const stripeKey = process.env.REACT_APP_STRIPE_PUBLIC_KEY;
   const [cart, setCart] = useState({});
   const [isInCart, setIsInCart] = useState(false);
@@ -56,7 +57,6 @@ const ReceiptPage = () => {
             <StripeCheckout
               stripeKey={stripeKey}
               token={handleToken}
-              onClick={console.log(stripeKey)}
               amount={cartTotal * 100}
             />
           </div>

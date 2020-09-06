@@ -32,7 +32,7 @@ const App = () => {
               <PrivateRoute exact path="/home" component={Home} />
               {/* <PrivateRoute exact path="/profile" component={Profile} /> */}
               <PrivateRoute exact path="/profile" component={Profile} />
-              <PrivateRoute exact path="/billpage" component={BillPage} />
+              <Route exact path="/billpage" component={BillPage} />
               <Elements stripe={stripePromise}>
                 <Route path="/receipt" component={ReceiptPage} />
                 <ToastContainer />
