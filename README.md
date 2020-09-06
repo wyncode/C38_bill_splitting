@@ -38,7 +38,7 @@
 <!-- ABOUT THE PROJECT -->
 # Cuenta Final Project
 
-[![Cuenta][product-screenshot]](https://cuenta-final-app.herokuapp.com/ )
+[Cuenta](https://cuenta-final-app.herokuapp.com/ )
 
 In the World we live in, `TIME` is of the essence. With that being said, we realized that there was a huge need for an APP to help make splitting a bill as easy as saying `SHOTS PLEASE.` 
 
@@ -111,12 +111,7 @@ Any contributions you make are **greatly appreciated**.
 <!-- CONTACT -->
 ## Contact
 
-Jeannie Torres - [@your_Linkin](https://linkedin.com/in/jeannie-torres-6628bb96/) - jeanniet89@gmail.com
-Francesca Marquez - [@your_Linkin](https://twitter.com/your_username) - jeanniet89@gmail.com
-Sylvia Robles - [@your_Linkin](https://twitter.com/your_username) - jeanniet89@gmail.com
-Samuel Robles - [@your_Linkin](https://twitter.com/your_username) - jeanniet89@gmail.com
-Rodolfo Romero - [@your_Linkin](https://twitter.com/your_username) - jeanniet89@gmail.com
-Kevin Hermanni - [@your_Linkin](https://twitter.com/your_username) - jeanniet89@gmail.com
+Jeannie Torres - [https://linkedin.com/in/jeannie-torres-6628bb96/] - jeanniet89@gmail.com
 
 Project Link: [https://github.com/wyncode/C38_bill_splitting](https://github.com/wyncode/C38_bill_splitting)
 
@@ -125,16 +120,27 @@ Project Link: [https://github.com/wyncode/C38_bill_splitting](https://github.com
 
 * [Img Shields](https://shields.io)
 * [GitHub Pages](https://pages.github.com)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
 * [Font Awesome](https://fontawesome.com)
 * [Stripe](https://stripe.com/)
-* [SendGrid](https://sendgrid.com/)
+* [Sendgrid/mail](https://sendgrid.com/)
 * [Cloudinary](https://cloudinary.com/)
-* [Twillio](https://www.twilio.com/messaging)
+* [Twilio](https://www.twilio.com/messaging)
+* [Toast](https://www.toast.com/kr)
+* [React-toastify](https://www.npmjs.com/package/react-toastify)
+* [Stripe/stripe](https://www.npmjs.com/package/react-stripe-elements)
+* [Bcryptjs](https://coderrocketfuel.com/article/using-bcrypt-to-hash-and-check-passwords-in-node-js)
+* [Cookie-parser](https://riptutorial.com/node-js/example/6012/using-a-template-engine)
+* [Jsonwebtoken](https://jwt.io/introduction/)
+* [Moment](https://momentjs.com/)
+* [Mongodb](https://www.mongodb.com/)
+* [Mongoose](https://medium.com/swlh/connecting-a-node-application-to-mongodb-using-mongoose-devdocs-3c924431efce)
+* [Passport](https://www.mokuji.me/article/passport-hashing-remember)
+* [Validator](https://yarnpkg.com/package/validator)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [contributors-shield]: https://img.shields.io/github/contributors/wyncode/C38_bill_splitting.svg?style=flat-square
 [contributors-url]: https://github.com/wyncode/C38_bill_splitting/graphs/contributors
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jeannie-torres-6628bb96/
+[issues-shield]: https://img.shields.io/github/issues/wyncode/C38_bill_splitting.svg?style=flat-square
 [issues-url]: https://github.com/wyncode/C38_bill_splitting/issues

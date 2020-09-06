@@ -3,7 +3,9 @@ import receiptData from '../context/ReceiptData';
 import Product from '../components/Stripe_info/Product';
 import StripeCheckout from 'react-stripe-checkout';
 import { useHistory } from 'react-router-dom';
-
+import HomeNav from '../components/HomeNav';
+import Navigation from '../components/Navigation';
+  
 const ReceiptPage = () => {
   const stripeKey = process.env.REACT_APP_STRIPE_PUBLIC_KEY;
   const [cart, setCart] = useState({});
@@ -36,6 +38,27 @@ const ReceiptPage = () => {
   }
   return (
     <>
+      <Navigation />
+      <div className="receiptimg row">
+        <div className="col-4 align-items-center justify-content-center">
+          <img
+            src="https://res.cloudinary.com/jeanniet89/image/upload/v1598823040/Cuenta%20App/Cuenta_-_Homepage_Carousel_wp8rkw.gif"
+            style={{ height: '15%' }}
+          />
+        </div>
+        <div className="col-4 align-items-center justify-content-center">
+          <img
+            src="https://res.cloudinary.com/jeanniet89/image/upload/v1598823035/Cuenta%20App/Cuenta_-_Select_Order_sdwpyp.gif"
+            style={{ height: '15%' }}
+          />
+        </div>
+        <div className="col-4 align-items-center justify-content-center">
+          <img
+            src="https://res.cloudinary.com/jeanniet89/image/upload/v1598823032/Cuenta%20App/Cuenta_-_Apple_Pay_dh2qdf.gif"
+            style={{ height: '15%' }}
+          />
+        </div>
+      </div>
       <div className="receipt-tab">
         <div className="receipt-number">tab ID</div>
         {receiptData.map((item) => (

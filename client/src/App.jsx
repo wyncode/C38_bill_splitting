@@ -12,11 +12,10 @@ import Profile from './pages/Profile';
 import About from './pages/About';
 import BillPage from './pages/BillPage';
 import { ToastContainer } from 'react-toastify';
-
 import './App.css';
 import { loadStripe } from '@stripe/stripe-js';
 
-const stripePromise = loadStripe(REACT_APP_STRIPE_PUBLIC_KEY);
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
 const App = () => {
   return (
@@ -32,7 +31,7 @@ const App = () => {
               <PrivateRoute exact path="/home" component={Home} />
               {/* <PrivateRoute exact path="/profile" component={Profile} /> */}
               <PrivateRoute exact path="/profile" component={Profile} />
-              <PrivateRoute exact path="/billpage" component={BillPage} />
+              <Route exact path="/billpage" component={BillPage} />
               <Elements stripe={stripePromise}>
                 <Route path="/receipt" component={ReceiptPage} />
                 <ToastContainer />
