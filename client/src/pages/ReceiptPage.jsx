@@ -5,7 +5,7 @@ import StripeCheckout from 'react-stripe-checkout';
 import { useHistory } from 'react-router-dom';
 import HomeNav from '../components/HomeNav';
 import Navigation from '../components/Navigation';
-  
+
 const ReceiptPage = () => {
   require('dotenv').config();
   const stripeKey = process.env.REACT_APP_STRIPE_PUBLIC_KEY;
@@ -61,7 +61,6 @@ const ReceiptPage = () => {
         </div>
       </div>
       <div className="receipt-tab">
-        <div className="receipt-number">tab ID</div>
         {receiptData.map((item) => (
           <Product
             key={item.id}
@@ -73,6 +72,7 @@ const ReceiptPage = () => {
         ))}
       </div>
       <div className="cart">
+        <br />
         <h3>Your Tab</h3>
         {!!cartTotal && (
           <div className="checkout">
