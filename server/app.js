@@ -1,4 +1,5 @@
 require('./db/config');
+if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 const express = require('express'),
   app = express(),
   passport = require('./db/middleware/authentication/authentication'),
@@ -15,7 +16,7 @@ app.use(express.json());
 app.use(openRoutes);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-//
+
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
   app.use(express.static(path.join(__dirname, '../client/build')));

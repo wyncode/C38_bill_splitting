@@ -29,13 +29,14 @@ router.post('/api/bill/checkout', async (req, res) => {
 
     const user = await User.findById(req.user._id);
 
-    user.billHistory.push(createdBill._id);
+    user.billHistory.push(bill._id);
 
     await user.save();
 
     res.status(201).json(bill);
   } catch (error) {
-    res.status(400).json({ error: error.toString() });
+    console.log(error);
+    res.status(400).json({ error: error.message });
   }
 });
 

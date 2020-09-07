@@ -32,7 +32,6 @@
     "sweetalert": "^2.1.2",
     "toast": "^0.2.10",
     "twilio": "^3.49.0",
-    "uuid": "^8.3.0",
     "validator": "^13.1.1"
   },
   "devDependencies": {
