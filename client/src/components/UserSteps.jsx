@@ -4,17 +4,11 @@ import { Carousel } from 'react-bootstrap';
 const UserSteps = () => {
   return (
     <>
-    <div>
-      <h1 className="homepagetitles mt-4 mb-4">How Cuenta works</h1>
+      <div>
+        <h1 className="homepagetitles mt-4 mb-4">How Cuenta works</h1>
       </div>
-      {/* <div className="carousel slide" data-ride="carousel">
-        <ul className="carousel-indicators">
-          <li data-target="#demo" data-slide-to="0" className="active"></li>
-          <li data-target="#demo" data-slide-to="1"></li>
-          <li data-target="#demo" data-slide-to="2"></li>
-        </ul>
-      </div> */}
-      <Carousel className="carousel-inner mt-4 mb-4 justify-content-center">
+
+      <Carousel className="carousel-inner mt-4 mb-4">
         <Carousel.Item>
           <img
             className="d-block"
@@ -24,9 +18,8 @@ const UserSteps = () => {
             alt="QR Scanner"
             height="350vh"
           />
-            <h2 className="hometext">Scan</h2>
-            <h3 className="homepagetext">the QR code in your receipt</h3>
-        
+          <h2 className="hometext">Scan</h2>
+          <h3 className="homepagetext">the QR code in your receipt</h3>
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -37,9 +30,8 @@ const UserSteps = () => {
             alt="Item Selection"
             height="350vh"
           />
-            <h2 className="hometext">Select</h2>
-            <h3 className="homepagetext">the items you ordered</h3>
-     
+          <h2 className="hometext">Select</h2>
+          <h3 className="homepagetext">the items you ordered</h3>
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -50,10 +42,9 @@ const UserSteps = () => {
             alt="Scanner Img"
             height="350vh"
           />
-  
-            <h2 className="hometext">Choose</h2>
-            <h3 className="homepagetext">your payment method</h3>
-       
+
+          <h2 className="hometext">Choose</h2>
+          <h3 className="homepagetext">your payment method</h3>
         </Carousel.Item>
       </Carousel>
     </>

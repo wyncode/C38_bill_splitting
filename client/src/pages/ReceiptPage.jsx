@@ -3,48 +3,37 @@ import axios from 'axios';
 import { AppContext } from '../context/AppContext';
 import receiptData from '../context/ReceiptData';
 import Product from '../components/Stripe_info/Product';
-import StripeCheckout from 'react-stripe-checkout';
-import { useHistory } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import {Container} from 'react-bootstrap';
 
 const ReceiptPage = () => {
   const { currentUser } = useContext(AppContext);
   const stripeKey = process.env.REACT_APP_STRIPE_PUBLIC_KEY;
-
   const [cart, setCart] = useState({});
   const history = useHistory();
-
   const cartTotal = Object.values(cart).reduce(
     (acc, { price }) => acc + price,
     0
   );
-
   const handleAddToCart = (product) => {
     const productInCart = cart[product.id];
     const newQuantity = productInCart ? productInCart.quantity + 1 : 1;
     setCart({ ...cart, [product.id]: { ...product, quantity: newQuantity } });
   };
-
   const handleRemoveFromCart = (cartItem) => {
     const newCart = { ...cart };
-
     delete newCart[cartItem.id];
-
     setCart(newCart);
   };
-
   const handleToken = async (token) => {
     const [postRoute, redirectRoute] = currentUser
       ? ['/api/bill/checkout', '/history']
       : ['/api/guest-checkout', '/'];
-
     await axios.post(
       postRoute,
       { token, amountDue: cartTotal * 100 },
       { withCredentials: !!currentUser }
     );
-
     history.push(redirectRoute);
   };
   return (
@@ -85,5 +74,4 @@ const ReceiptPage = () => {
     </>
   );
 };
-
 export default ReceiptPage;

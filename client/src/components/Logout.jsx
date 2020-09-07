@@ -14,7 +14,6 @@ const Logout = () => {
       .then(() => {
         setCurrentUser(null);
         sessionStorage.removeItem('user');
-        console.log('what is the session user', sessionStorage.getItem('user'));
         history.push('/login');
       })
       .catch((error) => console.log(error));

@@ -4,6 +4,7 @@
 *** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
 *** See the bottom of this document for the declaration of the reference variables
 -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
@@ -23,32 +24,37 @@
 </p>
 
 <!-- TABLE OF CONTENTS -->
+
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+- [About the Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
 <!-- ABOUT THE PROJECT -->
+
 # Cuenta Final Project
 
-[Cuenta](https://cuenta-final-app.herokuapp.com/ )
+[Cuenta](https://cuenta-final-app.herokuapp.com/)
 
-In the World we live in, `TIME` is of the essence. With that being said, we realized that there was a huge need for an APP to help make splitting a bill as easy as saying `SHOTS PLEASE.` 
+In the World we live in, `TIME` is of the essence. With that being said, we realized that there was a huge need for an APP to help make splitting a bill as easy as saying `SHOTS PLEASE.`
 
 ## Built With
+
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [React](https://react.com)
+
+- [Bootstrap](https://getbootstrap.com)
+- [JQuery](https://jquery.com)
+- [React](https://react.com)
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
@@ -56,24 +62,53 @@ To get a local copy up and running follow these simple example steps.
 
 ## Prerequisites
 
-* npm
-``sh
-npm install npm@latest -g
-``
+- npm
+  `sh npm install npm@latest -g `
 
 ## Installation
 
 1. `git clone` this repo
-``sh
-git clone https://github.com/your_username_/Project-Name.git
-``
+   `sh git clone https://github.com/your_username_/Project-Name.git `
 2. `cd` into it.
 3. `Install` NPM packages
-``sh
-yarn install
-``
+   `sh yarn install `
 4. `cd client && yarn install`
 5. `cp .env.sample .env`
+
+## Dependencies
+
+| Client Side             | Server Side             |
+| ----------------------- | ----------------------- |
+| @stripe/react-stripe-js | @sendgrid/mail          |
+| bootstrap               | bcryptjs                |
+| react                   | cloudinary              |
+| react-bootstrap         | concurrently            |
+| react-dom               | cookie-parser           |
+| react-qr-reader         | express                 |
+| react-router            | jsonwebtoken            |
+| axios                   | mongodb                 |
+|                         | cors                    |
+|                         | moment                  |
+|                         | mongoose                |
+|                         | validator               |
+|                         | passport                |
+|                         | passport-jwt            |
+|                         | @stripe/react-stripe-js |
+|                         | @stripe/stripe-js       |
+|                         | bootstrap               |
+|                         | npm                     |
+|                         | passport                |
+|                         | react-bootstrap         |
+|                         | react-icons             |
+|                         | react-qr-reader         |
+|                         | react-stripe-checkout   |
+|                         | react-toastify          |
+|                         | sendgrid                |
+|                         | stripe                  |
+|                         | sweetalert              |
+|                         | toast                   |
+|                         | twilio                  |
+|                         | validator               |
 
 ## Available build commands
 
@@ -92,14 +127,16 @@ NOTE: Heroku specifically runs `npm start`, so don't remove that from your packa
 - `git push heroku master`
 
 <!-- ROADMAP -->
+
 ## Roadmap
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. 
+Contributions are what make the open source community such an amazing place to learn, inspire, and create.
 Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
@@ -109,6 +146,7 @@ Any contributions you make are **greatly appreciated**.
 5. Open a Pull Request
 
 <!-- CONTACT -->
+
 ## Contact
 
 Jeannie Torres - [https://linkedin.com/in/jeannie-torres-6628bb96/] - jeanniet89@gmail.com
@@ -116,28 +154,30 @@ Jeannie Torres - [https://linkedin.com/in/jeannie-torres-6628bb96/] - jeanniet89
 Project Link: [https://github.com/wyncode/C38_bill_splitting](https://github.com/wyncode/C38_bill_splitting)
 
 <!-- ACKNOWLEDGEMENTS -->
+
 ## Acknowledgements
 
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [Stripe](https://stripe.com/)
-* [Sendgrid/mail](https://sendgrid.com/)
-* [Cloudinary](https://cloudinary.com/)
-* [Twilio](https://www.twilio.com/messaging)
-* [Toast](https://www.toast.com/kr)
-* [React-toastify](https://www.npmjs.com/package/react-toastify)
-* [Stripe/stripe](https://www.npmjs.com/package/react-stripe-elements)
-* [Bcryptjs](https://coderrocketfuel.com/article/using-bcrypt-to-hash-and-check-passwords-in-node-js)
-* [Cookie-parser](https://riptutorial.com/node-js/example/6012/using-a-template-engine)
-* [Jsonwebtoken](https://jwt.io/introduction/)
-* [Moment](https://momentjs.com/)
-* [Mongodb](https://www.mongodb.com/)
-* [Mongoose](https://medium.com/swlh/connecting-a-node-application-to-mongodb-using-mongoose-devdocs-3c924431efce)
-* [Passport](https://www.mokuji.me/article/passport-hashing-remember)
-* [Validator](https://yarnpkg.com/package/validator)
+- [Img Shields](https://shields.io)
+- [GitHub Pages](https://pages.github.com)
+- [Font Awesome](https://fontawesome.com)
+- [Stripe](https://stripe.com/)
+- [Sendgrid/mail](https://sendgrid.com/)
+- [Cloudinary](https://cloudinary.com/)
+- [Twilio](https://www.twilio.com/messaging)
+- [Toast](https://www.toast.com/kr)
+- [React-toastify](https://www.npmjs.com/package/react-toastify)
+- [Stripe/stripe](https://www.npmjs.com/package/react-stripe-elements)
+- [Bcryptjs](https://coderrocketfuel.com/article/using-bcrypt-to-hash-and-check-passwords-in-node-js)
+- [Cookie-parser](https://riptutorial.com/node-js/example/6012/using-a-template-engine)
+- [Jsonwebtoken](https://jwt.io/introduction/)
+- [Moment](https://momentjs.com/)
+- [Mongodb](https://www.mongodb.com/)
+- [Mongoose](https://medium.com/swlh/connecting-a-node-application-to-mongodb-using-mongoose-devdocs-3c924431efce)
+- [Passport](https://www.mokuji.me/article/passport-hashing-remember)
+- [Validator](https://yarnpkg.com/package/validator)
 
 <!-- MARKDOWN LINKS & IMAGES -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/wyncode/C38_bill_splitting.svg?style=flat-square
 [contributors-url]: https://github.com/wyncode/C38_bill_splitting/graphs/contributors
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
