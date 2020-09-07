@@ -15,8 +15,6 @@ router.post('/api/users/', async (req, res) => {
       name,
       email,
       password
-      // payment,
-      // billHistory
     });
 
     const token = await user.generateAuthToken();

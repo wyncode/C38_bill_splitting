@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button, Row, Col, Container } from 'react-bootstrap';
 
 const Product = ({
   name,
@@ -8,15 +9,17 @@ const Product = ({
   isInCart
 }) => {
   return (
-    <div className="product item">
-      <div>{name}</div>
-      <div>{price}</div>
-      {isInCart ? (
-        <button onClick={handleRemoveFromCart}>Remove from cart!</button>
-      ) : (
-        <button onClick={handleAddToCart}>Add to cart!</button>
-      )}
-    </div>
+    <Container className="homepagetext" id="rewardsbtn">
+      <Row className="product item">
+        <Col>{name}</Col>
+        <Col>{price}</Col>
+        {isInCart ? (
+          <Button onClick={handleRemoveFromCart}>Remove from cart!</Button>
+        ) : (
+          <Button onClick={handleAddToCart}>Add to cart!</Button>
+        )}
+      </Row>
+    </Container>
   );
 };
 

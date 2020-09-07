@@ -5,8 +5,6 @@ import axios from 'axios';
 import { AppContext } from '../context/AppContext';
 import receiptData from '../context/ReceiptData';
 import Product from '../components/Stripe_info/Product';
-import StripeCheckout from 'react-stripe-checkout';
-import { useHistory } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 
 const ReceiptPage = () => {
