@@ -25,15 +25,6 @@ const sendWelcomeEmail = (email, name) => {
   });
 };
 
-const sendCancellationEmail = (email, name) => {
-  sgMail.send({
-    to: email,
-    from: `${process.env.FROM_EMAIL}`,
-    subject: 'Sorry to see you go.',
-    text: `Bye ${name}. Hope to see you soon.`
-  });
-};
-
 const forgotPasswordEmail = (email, token) => {
   const htmlEmail = `
   <div>Click the link below to reset your password</div>
@@ -50,6 +41,5 @@ const forgotPasswordEmail = (email, token) => {
 };
 module.exports = {
   sendWelcomeEmail,
-  sendCancellationEmail,
   forgotPasswordEmail
 };

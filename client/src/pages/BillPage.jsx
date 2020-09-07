@@ -12,9 +12,8 @@ const BillPage = () => {
       history.push('/receipt');
     }
   }
-  // listening to the onsubmit event and then
+
   function handleSubmit(event) {
-    console.log('i am here');
     event.preventdefault();
     history.push('/receipt');
   }
@@ -45,6 +44,7 @@ const BillPage = () => {
             className="justify-content-center"
             delay={1000}
             onScan={(event) => handleScan(event)}
+            onError={() => {}}
           />
         </Form>
       </Container>

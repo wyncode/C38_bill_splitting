@@ -5,8 +5,6 @@ import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 import Navigation from '../components/Navigation';
 
-// import swal from 'sweetalert';
-
 const Login = ({ history }) => {
   const [formData, setFormData] = useState(null);
   const { setCurrentUser } = useContext(AppContext);
@@ -22,7 +20,6 @@ const Login = ({ history }) => {
       setCurrentUser(response.data);
       history.push('/home');
     });
-    // .catch(() => swal('Oops!', 'something went wrong', 'warning'));
   };
 
   return (
