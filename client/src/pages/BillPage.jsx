@@ -14,7 +14,6 @@ const BillPage = () => {
   }
   // listening to the onsubmit event and then
   function handleSubmit(event) {
-    console.log('i am here');
     event.preventdefault();
     history.push('/receipt');
   }
