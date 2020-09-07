@@ -1,6 +1,4 @@
 import React, { useState, useContext } from 'react';
-import { useHistory } from 'react-router-dom';
-import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 import { AppContext } from '../context/AppContext';
 import receiptData from '../context/ReceiptData';
@@ -8,6 +6,7 @@ import Product from '../components/Stripe_info/Product';
 import StripeCheckout from 'react-stripe-checkout';
 import { useHistory } from 'react-router-dom';
 import Navigation from '../components/Navigation';
+import {Container} from 'react-bootstrap';
 
 const ReceiptPage = () => {
   const { currentUser } = useContext(AppContext);
@@ -48,58 +47,41 @@ const ReceiptPage = () => {
 
     history.push(redirectRoute);
   };
-
   return (
     <>
       <Navigation />
-      <div className="receiptimg row">
-        <div className="col-4 align-items-center justify-content-center">
-          <img
-            src="https://res.cloudinary.com/jeanniet89/image/upload/v1598823040/Cuenta%20App/Cuenta_-_Homepage_Carousel_wp8rkw.gif"
-            alt="homecarousel"
-            style={{ height: '15%' }}
-          />
+      <Container className="receiptimg mt-8">
+        <div className="align-items-center receipt-tab">
+          {receiptData.map((item) => (
+            <div
+              className="homepagetitles"
+              style={{ padding: '4px' }}
+            >
+              <Product
+                key={item.id}
+                handleAddToCart={() => handleAddToCart(item)}
+                handleRemoveFromCart={() => handleRemoveFromCart(item)}
+                isInCart={cart[item.id]}
+                {...item}
+              />
+            </div>
+          ))}
         </div>
-        <div className="col-4 align-items-center justify-content-center">
-          <img
-            src="https://res.cloudinary.com/jeanniet89/image/upload/v1598823035/Cuenta%20App/Cuenta_-_Select_Order_sdwpyp.gif"
-            alt="elect items"
-            style={{ height: '15%' }}
-          />
+        <div className="cart">
+          <br />
+          <h3>Your Tab</h3>
+          {!!cartTotal && (
+            <div className="checkout">
+              <p>Your total is {cartTotal}</p>
+              <StripeCheckout
+                stripeKey={stripeKey}
+                token={handleToken}
+                amount={cartTotal * 100}
+              />
+            </div>
+          )}
         </div>
-        <div className="col-4 align-items-center justify-content-center">
-          <img
-            src="https://res.cloudinary.com/jeanniet89/image/upload/v1598823032/Cuenta%20App/Cuenta_-_Apple_Pay_dh2qdf.gif"
-            alt="payment"
-            style={{ height: '15%' }}
-          />
-        </div>
-      </div>
-      <div className="receipt-tab">
-        {receiptData.map((item) => (
-          <Product
-            key={item.id}
-            handleAddToCart={() => handleAddToCart(item)}
-            handleRemoveFromCart={() => handleRemoveFromCart(item)}
-            isInCart={cart[item.id]}
-            {...item}
-          />
-        ))}
-      </div>
-      <div className="cart">
-        <br />
-        <h3>Your Tab</h3>
-        {!!cartTotal && (
-          <div className="checkout">
-            <p>Your total is {cartTotal}</p>
-            <StripeCheckout
-              stripeKey={stripeKey}
-              token={handleToken}
-              amount={cartTotal * 100}
-            />
-          </div>
-        )}
-      </div>
+      </Container>
     </>
   );
 };

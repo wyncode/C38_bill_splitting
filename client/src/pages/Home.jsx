@@ -15,7 +15,7 @@ const Home = () => {
         src={
           'https://res.cloudinary.com/jeanniet89/image/upload/v1599014269/download_evcdkq.png'
         }
-        fluid
+        alt="cell scanner" fluid
       />
       <Container className="homecontainer">
         <Link to="/billpage">
@@ -32,7 +32,6 @@ const Home = () => {
         <p className="homeparagraph">
           Use these codes for a discount on your bill, or send them to a friend!
         </p>
-
         <Carousel>
           <Carousel.Item>
             <img
@@ -50,7 +49,6 @@ const Home = () => {
           </Carousel.Item>
         </Carousel>
         <h4>Local discounts in your area</h4>
-
         <Carousel className="mb-3 mt-4">
           <Carousel.Item>
             <Link href="./about" target="_blank">
