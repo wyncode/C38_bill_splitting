@@ -29,7 +29,7 @@ const DeleteButton = ({ id }) => {
       swal('Your task is safe!');
     }
   };
-
+  
   return (
     <Button variant="danger" onClick={handleDelete}>
       Delete
