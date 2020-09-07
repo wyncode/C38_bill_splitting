@@ -74,7 +74,6 @@ const ReceiptPage = () => {
         </div>
       </div>
       <div className="receipt-tab">
-        <div className="receipt-number">tab ID</div>
         {receiptData.map((item) => (
           <Product
             key={item.id}
@@ -86,6 +85,7 @@ const ReceiptPage = () => {
         ))}
       </div>
       <div className="cart">
+        <br />
         <h3>Your Tab</h3>
         {!!cartTotal && (
           <div className="checkout">
