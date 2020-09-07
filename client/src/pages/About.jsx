@@ -1,7 +1,6 @@
 import React from 'react';
 import CardDeck from 'react-bootstrap/CardDeck';
 import Card from 'react-bootstrap/Card';
-import '../components/Footer';
 import { Row, Container } from 'react-bootstrap';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
@@ -14,7 +13,7 @@ const About = () => {
     <>
       <Navigation />
 
-      <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
+      <Container className="container d-flex flex-column align-items-center justify-content-center">
         <h1>Our Team</h1>
 
         <Row>
