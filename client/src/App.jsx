@@ -16,6 +16,7 @@ import UpdatePassword from './pages/UpdatePassword';
 import { ToastContainer } from 'react-toastify';
 import './App.css';
 import { loadStripe } from '@stripe/stripe-js';
+import BillHistory from './pages/BillHistory';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
@@ -32,6 +33,7 @@ const App = () => {
               <Route exact path="/about" component={About} />
               <Route exact path="/reset-password" component={ResetPassword} />
               <Route exact path="/update-password" component={UpdatePassword} />
+              <Route exact path="/bill-history" component={BillHistory} />
               <PrivateRoute exact path="/home" component={Home} />
               {/* <PrivateRoute exact path="/profile" component={Profile} /> */}
               <PrivateRoute exact path="/profile" component={Profile} />
