@@ -6,6 +6,7 @@ import { AppContext } from '../context/AppContext';
 import receiptData from '../context/ReceiptData';
 import Product from '../components/Stripe_info/Product';
 import Navigation from '../components/Navigation';
+
 const ReceiptPage = () => {
   const { currentUser } = useContext(AppContext);
   const stripeKey = process.env.REACT_APP_STRIPE_PUBLIC_KEY;
