@@ -14,7 +14,7 @@ const UserSteps = () => {
           <li data-target="#demo" data-slide-to="2"></li>
         </ul>
       </div> */}
-      <Carousel className="carousel-inner mt-4 mb-4">
+      <Carousel className="carousel-inner mt-4 mb-4 justify-content-center">
         <Carousel.Item>
           <img
             className="d-block"

@@ -101,8 +101,6 @@
 }
 
 .carousel {
-  /* background-color: white; */
-  /* background-image: url('https://res.cloudinary.com/jeanniet89/image/upload/q_100/v1599423593/Cuenta%20App/Splitbill_frksso.jpg'); */
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
@@ -201,7 +199,7 @@
   display: block;
 }
 
-/* Landingpage Nav & footer */
+/* Landingpage Navigation & footer */
 
 #navbtn {
   color: #1840d9;
@@ -235,8 +233,6 @@
   font-size: 18px;
   color: black;
 }
-
-/* /* Signup css * */
 
 /* /* Home css * */
 
