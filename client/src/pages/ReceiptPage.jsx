@@ -4,7 +4,9 @@ import { AppContext } from '../context/AppContext';
 import receiptData from '../context/ReceiptData';
 import Product from '../components/Stripe_info/Product';
 import Navigation from '../components/Navigation';
-import {Container} from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
+import StripeCheckout from 'react-stripe-checkout';
 
 const ReceiptPage = () => {
   const { currentUser } = useContext(AppContext);
@@ -42,10 +44,7 @@ const ReceiptPage = () => {
       <Container className="receiptimg mt-8">
         <div className="align-items-center receipt-tab">
           {receiptData.map((item) => (
-            <div
-              className="homepagetitles"
-              style={{ padding: '4px' }}
-            >
+            <div className="homepagetitles" style={{ padding: '4px' }}>
               <Product
                 key={item.id}
                 handleAddToCart={() => handleAddToCart(item)}
