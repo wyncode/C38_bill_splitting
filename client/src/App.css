@@ -140,10 +140,6 @@
   animation: wobble 1s 1;
 }
 
-/* .wobble:focus, .wobble:hover [wobble='1'] {
-    animation: wobble infinite 3s 1;
-} */
-
 @keyframes wobble {
   25% {
     transform: rotate(15deg);
@@ -225,7 +221,7 @@
   height: 200px;
 }
 
-.fticons {
+.fticons:hover  {
   flex-direction: row;
   font-family: 'Poppins' sans-serif;
   font-style: normal;
@@ -233,6 +229,13 @@
   font-size: 18px;
   color: black;
 }
+
+.fiticons:hover {
+  background: #41ccaa !important;
+  color: #050801 !important;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005) !important;
+}
+
 
 /* /* Home css * */
 
@@ -385,26 +388,18 @@ span {
 
 /* Billpage */
 
-#billpg-imgContainer {
-  display: flex;
-  overflow: hidden;
-  height: 50%;
+.billpagejumbo{
+  background-image: url('https://res.cloudinary.com/jeanniet89/image/upload/v1598582653/Cuenta%20App/Blob__ouvu1p.png');
+  display:flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.billpg {
-  animation-direction: unset;
-  animation: rotate;
-  transform: rotate(-30deg);
- 
-}
-
-.billpg img {
-  width: 50%;
-  border-bottom-left-radius: 100px ;
-  border-bottom-right-radius: 500px ;
-}
+/* Receipt page */
 
 .receiptimg {
-  align-items: space-around;
-  margin: 0;
+  background-image: url('https://res.cloudinary.com/jeanniet89/image/upload/v1598582653/Cuenta%20App/Blob__ouvu1p.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }

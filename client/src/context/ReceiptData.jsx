@@ -1,52 +1,52 @@
 const receiptData = [
   {
     id: '0',
-    name: 'ribs',
+    name: 'Ribs',
     price: 17
   },
   {
     id: '1',
-    name: 'pizza',
+    name: 'Pizza',
     price: 12
   },
   {
     id: '2',
-    name: 'ravioli',
+    name: 'Ravioli',
     price: 9
   },
   {
     id: '3',
-    name: 'linguine',
+    name: 'Linguine',
     price: 11
   },
   {
     id: '4',
-    name: 'french fries',
+    name: 'French Fries',
     price: 4
   },
   {
     id: '5',
-    name: 'salad',
+    name: 'Salad',
     price: 6
   },
   {
     id: '6',
-    name: 'flan',
+    name: 'Flan',
     price: 6
   },
   {
     id: '7',
-    name: 'rice',
+    name: 'Rice',
     price: 6
   },
   {
     id: '8',
-    name: 'beer',
+    name: 'Beer',
     price: 8
   },
   {
     id: '9',
-    name: 'martini',
+    name: 'Martini',
     price: 11
   }
 ];

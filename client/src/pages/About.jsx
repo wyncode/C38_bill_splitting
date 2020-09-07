@@ -12,10 +12,8 @@ const About = () => {
   return (
     <>
       <Navigation />
-
       <Container className="container d-flex flex-column align-items-center justify-content-center">
         <h1>Our Team</h1>
-
         <Row>
           <CardDeck>
             <Card
@@ -66,7 +64,7 @@ const About = () => {
             >
               <Card.Img
                 variant="top"
-                src="https://res.cloudinary.com/jeanniet89/image/upload/v1599245681/Screen_Shot_2020-09-04_at_2.51.00_PM_kz8twr.png"
+                src="https://res.cloudinary.com/jeanniet89/image/upload/v1599450826/Cuenta%20App/IMG_1362_mebffn.jpg"
               />
               <Card.Body>
                 <Card.Title className="about">Jeannie Torres</Card.Title>

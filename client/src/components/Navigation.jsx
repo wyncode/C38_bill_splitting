@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 
 const Navigation = () => {
   return (
-    <Navbar className="justify-content-between">
+    <Navbar className="justify-content-between mb-4 mt-2">
       <Navbar.Brand href="./">
         <img
           src={
