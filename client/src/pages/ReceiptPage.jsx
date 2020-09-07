@@ -5,6 +5,8 @@ import axios from 'axios';
 import { AppContext } from '../context/AppContext';
 import receiptData from '../context/ReceiptData';
 import Product from '../components/Stripe_info/Product';
+import StripeCheckout from 'react-stripe-checkout';
+import { useHistory } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 
 const ReceiptPage = () => {
@@ -54,18 +56,21 @@ const ReceiptPage = () => {
         <div className="col-4 align-items-center justify-content-center">
           <img
             src="https://res.cloudinary.com/jeanniet89/image/upload/v1598823040/Cuenta%20App/Cuenta_-_Homepage_Carousel_wp8rkw.gif"
+            alt="homecarousel"
             style={{ height: '15%' }}
           />
         </div>
         <div className="col-4 align-items-center justify-content-center">
           <img
             src="https://res.cloudinary.com/jeanniet89/image/upload/v1598823035/Cuenta%20App/Cuenta_-_Select_Order_sdwpyp.gif"
+            alt="elect items"
             style={{ height: '15%' }}
           />
         </div>
         <div className="col-4 align-items-center justify-content-center">
           <img
             src="https://res.cloudinary.com/jeanniet89/image/upload/v1598823032/Cuenta%20App/Cuenta_-_Apple_Pay_dh2qdf.gif"
+            alt="payment"
             style={{ height: '15%' }}
           />
         </div>

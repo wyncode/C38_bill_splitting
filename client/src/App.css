@@ -389,27 +389,23 @@ span {
 
 /* Billpage */
 
+#billpg-imgContainer {
+  display: flex;
+  overflow: hidden;
+  height: 50%;
+}
+
 .billpg {
   animation-direction: unset;
   animation: rotate;
   transform: rotate(-30deg);
-  overflow: hidden;
-  border-bottom-right-radius: 500px;
-  border-bottom-left-radius: 100px;
+ 
 }
 
 .billpg img {
-  width: 100%;
-}
-
-@keyframes billpg {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(180deg);
-  }
+  width: 50%;
+  border-bottom-left-radius: 100px ;
+  border-bottom-right-radius: 500px ;
 }
 
 .receiptimg {
