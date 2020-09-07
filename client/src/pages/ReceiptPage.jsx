@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { useHistory } from 'react-router-dom';
+import StripeCheckout from 'react-stripe-checkout';
+import axios from 'axios';
+import { AppContext } from '../context/AppContext';
 import receiptData from '../context/ReceiptData';
 import Product from '../components/Stripe_info/Product';
 import StripeCheckout from 'react-stripe-checkout';
 import { useHistory } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-  
+
 const ReceiptPage = () => {
-  require('dotenv').config();
+  const { currentUser } = useContext(AppContext);
   const stripeKey = process.env.REACT_APP_STRIPE_PUBLIC_KEY;
+
   const [cart, setCart] = useState({});
-  const [isInCart, setIsInCart] = useState(false);
   const history = useHistory();
 
   const cartTotal = Object.values(cart).reduce(
@@ -21,7 +25,6 @@ const ReceiptPage = () => {
     const productInCart = cart[product.id];
     const newQuantity = productInCart ? productInCart.quantity + 1 : 1;
     setCart({ ...cart, [product.id]: { ...product, quantity: newQuantity } });
-    setIsInCart(true);
   };
 
   const handleRemoveFromCart = (cartItem) => {
@@ -30,12 +33,22 @@ const ReceiptPage = () => {
     delete newCart[cartItem.id];
 
     setCart(newCart);
-    setIsInCart(false);
   };
 
-  function handleToken() {
-    history.push('/home');
-  }
+  const handleToken = async (token) => {
+    const [postRoute, redirectRoute] = currentUser
+      ? ['/api/bill/checkout', '/history']
+      : ['/api/guest-checkout', '/'];
+
+    await axios.post(
+      postRoute,
+      { token, amountDue: cartTotal * 100 },
+      { withCredentials: !!currentUser }
+    );
+
+    history.push(redirectRoute);
+  };
+
   return (
     <>
       <Navigation />
@@ -69,7 +82,7 @@ const ReceiptPage = () => {
             key={item.id}
             handleAddToCart={() => handleAddToCart(item)}
             handleRemoveFromCart={() => handleRemoveFromCart(item)}
-            isInCart={isInCart}
+            isInCart={cart[item.id]}
             {...item}
           />
         ))}
