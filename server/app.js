@@ -3,7 +3,7 @@ if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 const express = require('express'),
   app = express(),
   cookieParser = require('cookie-parser'),
-  bodyParser = require('body-parser'),
+  // bodyParser = require('body-parser'),
   openRoutes = require('./routes/open'),
   userRouter = require('./routes/secure/users'),
   billRouter = require('./routes/secure/bills'),
