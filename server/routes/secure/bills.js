@@ -2,7 +2,7 @@ const router = require('express').Router(),
   Bill = require('../../db/models/bill'),
   User = require('../../db/models/user'),
   stripe = require('stripe')(process.env.STRIPE_SECRET_KEY),
-  passport = require('./db/middleware/authentication/authentication');
+  passport = require('../../db/middleware/authentication/authentication');
 
 router.get(
   '/api/bill/me',

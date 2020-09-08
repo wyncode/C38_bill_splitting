@@ -1,7 +1,7 @@
 const { welcomeText } = require('../../db/twilio/send_sms'),
   router = require('express').Router(),
   isAdmin = require('../../db/middleware/authorization/authorization'),
-  passport = require('./db/middleware/authentication/authentication');
+  passport = require('../../db/middleware/authentication/authentication');
 
 router.get(
   '/api/users/me',
