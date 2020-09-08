@@ -11,6 +11,10 @@ const express = require('express'),
 
 // Parse incoming JSON into objectsx
 app.use(express.json());
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, '../client/build')));
+}
 
 app.use(openRoutes);
 // app.use(bodyParser.urlencoded({ extended: false }));
@@ -18,11 +22,6 @@ app.use(cookieParser());
 
 app.use(userRouter);
 app.use(billRouter);
-
-if (process.env.NODE_ENV === 'production') {
-  // Serve any static files
-  app.use(express.static(path.join(__dirname, '../client/build')));
-}
 
 if (process.env.NODE_ENV === 'production') {
   // Handle React routing, return all requests to React app
