@@ -5,7 +5,7 @@ const { welcomeText } = require('../../db/twilio/send_sms'),
 
 router.get(
   '/api/users/me',
-  app.use(
+  router.use(
     passport.authenticate('jwt', {
       session: false
     })
@@ -16,7 +16,7 @@ router.get(
 router.get(
   '/api/admin',
   isAdmin(),
-  app.use(
+  router.use(
     passport.authenticate('jwt', {
       session: false
     })
@@ -32,7 +32,7 @@ router.get(
 
 router.patch(
   '/api/users/me',
-  app.use(
+  router.use(
     passport.authenticate('jwt', {
       session: false
     })
@@ -64,7 +64,7 @@ router.patch(
 
 router.post(
   '/api/users/logout',
-  app.use(
+  router.use(
     passport.authenticate('jwt', {
       session: false
     })
@@ -85,7 +85,7 @@ router.post(
 
 router.post(
   '/api/users/logoutAll',
-  app.use(
+  router.use(
     passport.authenticate('jwt', {
       session: false
     })
@@ -104,7 +104,7 @@ router.post(
 
 router.put(
   '/api/password',
-  app.use(
+  router.use(
     passport.authenticate('jwt', {
       session: false
     })
@@ -123,7 +123,7 @@ router.put(
 
 router.delete(
   '/api/users/me',
-  app.use(
+  router.use(
     passport.authenticate('jwt', {
       session: false
     })

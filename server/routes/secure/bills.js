@@ -6,7 +6,7 @@ const router = require('express').Router(),
 
 router.get(
   '/api/bill/me',
-  app.use(
+  router.use(
     passport.authenticate('jwt', {
       session: false
     })
@@ -16,7 +16,7 @@ router.get(
 
 router.post(
   '/api/bill/checkout',
-  app.use(
+  router.use(
     passport.authenticate('jwt', {
       session: false
     })
@@ -59,7 +59,7 @@ router.post(
 
 router.get(
   'api/bill/me/:id',
-  app.use(
+  router.use(
     passport.authenticate('jwt', {
       session: false
     })
@@ -76,7 +76,7 @@ router.get(
 
 router.patch(
   'api/bill/me/:id',
-  app.use(
+  router.use(
     passport.authenticate('jwt', {
       session: false
     })
