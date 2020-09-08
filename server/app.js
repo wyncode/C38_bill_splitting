@@ -13,7 +13,7 @@ const express = require('express'),
 app.use(express.json());
 
 app.use(openRoutes);
-app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(userRouter);
