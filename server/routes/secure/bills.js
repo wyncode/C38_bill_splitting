@@ -1,68 +1,102 @@
 const router = require('express').Router(),
   Bill = require('../../db/models/bill'),
   User = require('../../db/models/user'),
-  stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+  stripe = require('stripe')(process.env.STRIPE_SECRET_KEY),
+  passport = require('./db/middleware/authentication/authentication');
 
-router.get('/api/bill/me', async (req, res) => res.json(req.bill));
+router.get(
+  '/api/bill/me',
+  app.use(
+    passport.authenticate('jwt', {
+      session: false
+    })
+  ),
+  async (req, res) => res.json(req.bill)
+);
 
-router.post('/api/bill/checkout', async (req, res) => {
-  const { amountDue, token } = req.body;
+router.post(
+  '/api/bill/checkout',
+  app.use(
+    passport.authenticate('jwt', {
+      session: false
+    })
+  ),
+  async (req, res) => {
+    const { amountDue, token } = req.body;
 
-  const billDate = new Date().toISOString();
+    const billDate = new Date().toISOString();
 
-  try {
-    const { id } = await stripe.charges.create({
-      amount: amountDue,
-      source: token.id,
-      currency: 'usd'
-    });
+    try {
+      const { id } = await stripe.charges.create({
+        amount: amountDue,
+        source: token.id,
+        currency: 'usd'
+      });
 
-    const bill = new Bill({
-      amountDue,
-      party: req.user.id,
-      billDate,
-      tokenID: token.id,
-      transactionID: id
-    });
+      const bill = new Bill({
+        amountDue,
+        party: req.user.id,
+        billDate,
+        tokenID: token.id,
+        transactionID: id
+      });
 
-    await bill.save();
+      await bill.save();
 
-    const user = await User.findById(req.user._id);
+      const user = await User.findById(req.user._id);
 
-    user.billHistory.push(bill._id);
+      user.billHistory.push(bill._id);
 
-    await user.save();
+      await user.save();
 
-    res.status(201).json(bill);
-  } catch (error) {
-    console.log(error);
-    res.status(400).json({ error: error.message });
+      res.status(201).json(bill);
+    } catch (error) {
+      console.log(error);
+      res.status(400).json({ error: error.message });
+    }
   }
-});
+);
 
-router.get('api/bill/me/:id', async (req, res) => {
-  try {
-    const findBill = Bill.findById(req.params.id);
-    res.json(findBill);
-  } catch (error) {
-    res.status(400).json({ error: e.toString() });
+router.get(
+  'api/bill/me/:id',
+  app.use(
+    passport.authenticate('jwt', {
+      session: false
+    })
+  ),
+  async (req, res) => {
+    try {
+      const findBill = Bill.findById(req.params.id);
+      res.json(findBill);
+    } catch (error) {
+      res.status(400).json({ error: e.toString() });
+    }
   }
-});
+);
 
-router.patch('api/bill/me/:id', async (req, res) => {
-  const updates = Object.keys(req.body);
-  const allowedUpdates = ['party'];
-  const validOperation = updates.every((update) =>
-    allowedUpdates.includes(update)
-  );
-  if (!validOperation) return res.status(400).send({ error: 'invalid error' });
-  try {
-    updates.forEach((update) => (req.bill[update] = req.body[update]));
-    await req.bill.save();
-    res.json(req.bill);
-  } catch (error) {
-    res.status(400).json({ error: e.toString() });
+router.patch(
+  'api/bill/me/:id',
+  app.use(
+    passport.authenticate('jwt', {
+      session: false
+    })
+  ),
+  async (req, res) => {
+    const updates = Object.keys(req.body);
+    const allowedUpdates = ['party'];
+    const validOperation = updates.every((update) =>
+      allowedUpdates.includes(update)
+    );
+    if (!validOperation)
+      return res.status(400).send({ error: 'invalid error' });
+    try {
+      updates.forEach((update) => (req.bill[update] = req.body[update]));
+      await req.bill.save();
+      res.json(req.bill);
+    } catch (error) {
+      res.status(400).json({ error: e.toString() });
+    }
   }
-});
+);
 
 module.exports = router;

@@ -2,7 +2,6 @@ require('./db/config');
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 const express = require('express'),
   app = express(),
-  passport = require('./db/middleware/authentication/authentication'),
   cookieParser = require('cookie-parser'),
   bodyParser = require('body-parser'),
   openRoutes = require('./routes/open'),
@@ -21,12 +20,6 @@ if (process.env.NODE_ENV === 'production') {
   // Serve any static files
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
-
-app.use(
-  passport.authenticate('jwt', {
-    session: false
-  })
-);
 
 app.use(userRouter);
 app.use(billRouter);
